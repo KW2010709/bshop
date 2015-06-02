@@ -1,0 +1,19 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<div>Your Cart</h2>
+<ul>    
+  <% @cart.line_items.each do |item| %>
+<!-- START_HIGHLIGHT -->
+    <li><%= item.quantity %> &times; <%= item.product.title %></li>
+<!-- END_HIGHLIGHT -->  
+  <% end %>
+</ul>
+<!-- START_HIGHLIGHT -->
+<%= button_to 'Empty cart', @cart, method: :delete,
+    data: { confirm: 'Are you sure?' } %>
+<!-- END_HIGHLIGHT -->
+
+<%= link_to 'Edit', edit_cart_path(@cart) %> |
+<%= link_to 'Back', carts_path %>
