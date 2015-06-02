@@ -1225,3 +1225,779 @@ Completed 200 OK in 706ms (Views: 691.6ms | ActiveRecord: 10.6ms)
 
 
 Started GET "/assets/application.self-8c9732dc9596bae386f3ffc560876d1f1b7a924caac3463443625dbf96a77896.css?body=1" for 127.0.0.1 at 2015-06-02 14:09:18 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 22:34:30 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (298.5ms)
+Completed 200 OK in 1745ms (Views: 1691.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-8c9732dc9596bae386f3ffc560876d1f1b7a924caac3463443625dbf96a77896.css?body=1" for 127.0.0.1 at 2015-06-01 22:34:33 -0700
+
+
+Started GET "/assets/scaffolds.self-354b0bf3b15c3be05cb07192a65772e54a13672b37f8bb08d9c94f9c67c509f1.css?body=1" for 127.0.0.1 at 2015-06-01 22:34:33 -0700
+
+
+Started GET "/assets/products.self-d8187776b9c2769b85f1ef96d9bab2112949a52916da6c18edddce45acc9702b.css?body=1" for 127.0.0.1 at 2015-06-01 22:34:33 -0700
+
+
+Started GET "/assets/store.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-01 22:34:33 -0700
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-01 22:34:33 -0700
+
+
+Started GET "/assets/store.self-c52c6c92fa2f3b02ba20ad48b6b438a8ea04a9e879ffe9e708f9103db87159fb.css?body=1" for 127.0.0.1 at 2015-06-01 22:34:33 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 22:39:31 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (17.2ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.6ms)
+
+SyntaxError (/home/lh1/bottleshop/app/views/layouts/application.html.erb:19: syntax error, unexpected ')'
+...uffer.append=( @page_title || );@output_buffer.safe_append='...
+...                               ^
+/home/lh1/bottleshop/app/views/layouts/application.html.erb:40: syntax error, unexpected keyword_ensure, expecting ')'
+/home/lh1/bottleshop/app/views/layouts/application.html.erb:42: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/layouts/application.html.erb:19: syntax error, unexpected ')'
+  app/views/layouts/application.html.erb:40: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/layouts/application.html.erb:42: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (53.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (116.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (56.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (134.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 22:40:30 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (8.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 140ms (Views: 130.2ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 22:45:32 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 168ms (Views: 166.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-4a17a8007983e6916e6f58866303e23660a84d5e9b3c765625798db7aff0416a.css?body=1" for 127.0.0.1 at 2015-06-01 22:45:32 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 22:47:16 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (7.2ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 162ms (Views: 146.9ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/assets/application.self-db998c168090c1f5c5491f40850100091e9e1136b7d1c31c7cb7aa83a217182d.css?body=1" for 127.0.0.1 at 2015-06-01 22:47:16 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 22:54:19 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (5.0ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 180ms (Views: 173.3ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/application.self-7f82002bfba6fc478033dacd590dbf097a5c3080ed13ad63501761deb96bdf12.css?body=1" for 127.0.0.1 at 2015-06-01 22:54:20 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 22:55:20 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 286ms (Views: 283.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-808cddcbdb538f827be49053ca94ce3f7a84c5e837ad16c1b3183a1dabf6bdf5.css?body=1" for 127.0.0.1 at 2015-06-01 22:55:21 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 22:55:49 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 197ms (Views: 195.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-8d532870a822aec5ff4f242fe277499be5ce4d5100ec4690296999e14db89843.css?body=1" for 127.0.0.1 at 2015-06-01 22:55:49 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 22:56:19 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 296ms (Views: 293.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-2c69bc460b9b149cd5b342e1e1f744b62362fc971ca56eacb09b564f0703cbd5.css?body=1" for 127.0.0.1 at 2015-06-01 22:56:19 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:00:33 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (4.7ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 161ms (Views: 154.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/application.self-8a638294737db155a23c98f1e76510b355ed573c593459971af61c9283b04e44.css?body=1" for 127.0.0.1 at 2015-06-01 23:00:33 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:01:30 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 131ms (Views: 129.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-f875c235106d6adf1624f6e04cbe2583a2617bafc15c32019596f1cc3a75fbe1.css?body=1" for 127.0.0.1 at 2015-06-01 23:01:31 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:05:45 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (1.8ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 249ms (Views: 240.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/products.self-a84f0701328d53e06ecd77126163f156b2ca07af5a81e8ac6e3c9f924d4530ec.css?body=1" for 127.0.0.1 at 2015-06-01 23:05:46 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:05:49 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 133ms (Views: 130.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:06:07 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 256ms (Views: 254.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/products.self-cf87c3dfdce2ceef3787d7875b9ca5c39d14393ff06fa722a6e14563b5532a72.css?body=1" for 127.0.0.1 at 2015-06-01 23:06:07 -0700
+
+
+Started GET "/product" for 127.0.0.1 at 2015-06-01 23:06:28 -0700
+
+ActionController::RoutingError (No route matches [GET] "/product"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (64.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (149.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (66.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (130.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:09:07 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 231ms (Views: 223.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/store.self-53ae4a73d610fd0a304568921406ffa895bc0e7d6b6b37d1c8fc9dfdab7fab9c.css?body=1" for 127.0.0.1 at 2015-06-01 23:09:08 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:10:10 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 225ms (Views: 222.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/store.self-d8ed4ef842eb1cea3e72d661d810215052cc230d3b2a7514cddcbe5767c0e5b6.css?body=1" for 127.0.0.1 at 2015-06-01 23:10:10 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:10:39 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 227ms (Views: 225.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/store.self-80649a85e64ac2915ff83df21eaefb1bec40bd60900b96c5b598f26e1bbdb6be.css?body=1" for 127.0.0.1 at 2015-06-01 23:10:39 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:11:16 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (1.8ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 210ms (Views: 206.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/store.self-b20d9d0847010c497e3ae02a826016a7555e914b377e7071a502ddd9a6c54281.css?body=1" for 127.0.0.1 at 2015-06-01 23:11:17 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:11:32 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 326ms (Views: 321.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/store.self-fda7d16137266dafa20475feff05e64142dcaeda47f13d5229601e9c9b119969.css?body=1" for 127.0.0.1 at 2015-06-01 23:11:32 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:11:50 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 303ms (Views: 299.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/store.self-414cea8830a4641030df519cad83000057e5222f7e4b88925d62ee407fc0b9e5.css?body=1" for 127.0.0.1 at 2015-06-01 23:11:50 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:12:34 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 250ms (Views: 241.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/store.self-bc090f523afa19d329b9e3ddffa82cb6f4a8f61079e1f37f93df4ba8fae0c0ff.css?body=1" for 127.0.0.1 at 2015-06-01 23:12:34 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:12:44 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 221ms (Views: 218.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/store.self-d7d3f3fa67b8a3c3b363059862906502d789015d42cd7f035501046e460f6ca9.css?body=1" for 127.0.0.1 at 2015-06-01 23:12:45 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:13:01 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 188ms (Views: 183.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-4094320f6a9189d63b14f4efbe7669fe0ee88ab30ba58494134437ca3fff810d.css?body=1" for 127.0.0.1 at 2015-06-01 23:13:01 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:13:49 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 248ms (Views: 237.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-ccfd8ff1b0ef6b51e2911f9c3417900dfc03c0d72ba5ed165b4e878dd99ac898.css?body=1" for 127.0.0.1 at 2015-06-01 23:13:49 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:20:11 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (6.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 6.5ms)
+
+SyntaxError (/home/lh1/bottleshop/app/views/layouts/application.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+...f_JPEG/pic1.jpg?type=w3") width=400 height=200 );@output_buf...
+...                               ^
+/home/lh1/bottleshop/app/views/layouts/application.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+....jpg?type=w3") width=400 height=200 );@output_buffer.safe_ap...
+...                               ^):
+  app/views/layouts/application.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (45.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (94.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:20:56 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/home/lh1/bottleshop/app/views/layouts/application.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+...f_JPEG/pic1.jpg?type=w3") width="400" height="200" );@output...
+...                               ^
+/home/lh1/bottleshop/app/views/layouts/application.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+...pg?type=w3") width="400" height="200" );@output_buffer.safe_...
+...                               ^):
+  app/views/layouts/application.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (43.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (3.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (39.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (78.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:22:10 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.7ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (29.1ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.7ms)
+
+SyntaxError (/home/lh1/bottleshop/app/views/layouts/application.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+...Kf_JPEG/pic1.jpg?type=w3" width="400" height="200") );@outpu...
+...                               ^
+/home/lh1/bottleshop/app/views/layouts/application.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+...jpg?type=w3" width="400" height="200") );@output_buffer.safe...
+...                               ^
+/home/lh1/bottleshop/app/views/layouts/application.html.erb:18: syntax error, unexpected ')', expecting keyword_end
+...w3" width="400" height="200") );@output_buffer.safe_append='
+...                               ^):
+  app/views/layouts/application.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:18: syntax error, unexpected ')', expecting keyword_end
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (4.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (42.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (4.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (88.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:22:34 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 177ms (Views: 175.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:24:05 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (25.0ms)
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `symbolize_keys' for "200":String):
+    15: <body class="<%= controller.controller_name %>">
+    16: <!-- START_HIGHLIGHT -->
+    17:   <div id="banner">
+    18:     <%= image_tag("http://postfiles11.naver.net/20150518_218/knnk6807_1431956450490ATkKf_JPEG/pic1.jpg?type=w3", size="200") %>
+    19:    </div>
+    20:   <div id="columns">
+    21:     <div id="side">
+  app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb__2963616869356590116_69895810510680'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (33.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (89.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:26:49 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (2.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 157ms (Views: 149.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:27:22 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (6.3ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 129ms (Views: 120.8ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:34:20 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 128ms (Views: 117.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:36:34 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.7ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 289ms (Views: 286.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-5864ff8ff849eb7747c0ae7a07c13428a12224770ade2e49a2020db058f9a1f1.css?body=1" for 127.0.0.1 at 2015-06-01 23:36:35 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:37:43 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 221ms (Views: 219.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-aa252ab7a63448928ab149de80c8842ef6de6b9eb6b590c0096ae65c4f1becb2.css?body=1" for 127.0.0.1 at 2015-06-01 23:37:43 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:38:31 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 172ms (Views: 170.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-052cf1d2490de4248af2a74ec2c1774ab7b4835c7c2a3b9a01829c1e284db8e8.css?body=1" for 127.0.0.1 at 2015-06-01 23:38:32 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:38:34 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 223ms (Views: 215.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:39:04 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (15.7ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (Invalid CSS after "...ND_HIGHLIGHT */": expected "}", was ""):
+     6: <!-- START_HIGHLIGHT -->
+     7:   <title>YD?ID!</title>
+     8: <!-- END_HIGHLIGHT -->
+     9:   <!-- <label id="code.slt"/> --><%= stylesheet_link_tag    "application", media: "all",
+    10:     "data-turbolinks-track" => true %>
+    11:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %><!-- <label id="code.jlt"/> -->
+    12:   <%= csrf_meta_tags %><!-- <label id="code.csrf"/> -->
+  app/assets/stylesheets/application.css.scss:68
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__2963616869356590116_69895815843620'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (24.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (48.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (90.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:40:58 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (3.5ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (26.9ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 3.5ms)
+
+ActionView::Template::Error (Invalid CSS after "...ND_HIGHLIGHT */": expected "}", was ""):
+     6: <!-- START_HIGHLIGHT -->
+     7:   <title>YD?ID!</title>
+     8: <!-- END_HIGHLIGHT -->
+     9:   <!-- <label id="code.slt"/> --><%= stylesheet_link_tag    "application", media: "all",
+    10:     "data-turbolinks-track" => true %>
+    11:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %><!-- <label id="code.jlt"/> -->
+    12:   <%= csrf_meta_tags %><!-- <label id="code.csrf"/> -->
+  app/assets/stylesheets/application.css.scss:68
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__2963616869356590116_69895815843620'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (8.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (45.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (93.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:41:54 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (3.9ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 171ms (Views: 165.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/application.self-baadc3abe8c5b05e61153642d8b7956756446db6423c9e434469a1b662bd68e1.css?body=1" for 127.0.0.1 at 2015-06-01 23:41:54 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:42:19 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 191ms (Views: 189.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-379acef1e9728bec0f5a6812cec5817ed5f5dc8464d39b01673511da6e5aa6de.css?body=1" for 127.0.0.1 at 2015-06-01 23:42:19 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:43:11 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 218ms (Views: 215.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-d897519e01a675e4fea8e3948b2ee69d0eb6945fc30e940a881a2ba22636ae55.css?body=1" for 127.0.0.1 at 2015-06-01 23:43:11 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:47:24 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 128ms (Views: 121.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:49:38 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (3.0ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (24.6ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 3.0ms)
+
+SyntaxError (/home/lh1/bottleshop/app/views/layouts/application.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
+/home/lh1/bottleshop/app/views/layouts/application.html.erb:43: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/layouts/application.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/layouts/application.html.erb:43: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (50.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (48.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (98.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:50:09 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (5.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 143ms (Views: 129.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:50:58 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (16.5ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/home/lh1/bottleshop/app/views/layouts/application.html.erb:18: syntax error, unexpected tINTEGER, expecting ')'
+...r.append=( image_tag("size:"200x100", http://postfiles11.nav...
+...                               ^
+/home/lh1/bottleshop/app/views/layouts/application.html.erb:18: syntax error, unexpected ')', expecting keyword_end
+...ATkKf_JPEG/pic1.jpg?type=w3") );@output_buffer.safe_append='
+...                               ^):
+  app/views/layouts/application.html.erb:18: syntax error, unexpected tINTEGER, expecting ')'
+  app/views/layouts/application.html.erb:18: syntax error, unexpected ')', expecting keyword_end
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (7.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (44.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (91.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:51:45 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (13.0ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 126ms (Views: 109.5ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:55:02 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 303ms (Views: 301.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/store.self-31d39859baf5c3da7c5280fdcbfc7b8a90eedac0288e26167beb469b2c10cfff.css?body=1" for 127.0.0.1 at 2015-06-01 23:55:03 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:56:04 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 237ms (Views: 233.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/store.self-3e1f874c6aa079a4e34c31dc642bed52ecd7f3fcbf7a6ac152aca808109cfb6e.css?body=1" for 127.0.0.1 at 2015-06-01 23:56:04 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:57:39 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 187ms (Views: 184.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-d931c93f493759fe82612b1a27c59156c3d2ef22588252a206633f07639cc408.css?body=1" for 127.0.0.1 at 2015-06-01 23:57:39 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:58:53 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (3.3ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 192ms (Views: 187.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/application.self-786b5db82988c8d83b50405058d27c94a645c7bd5ebfb9f8d7351a6806b8819b.css?body=1" for 127.0.0.1 at 2015-06-01 23:58:53 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-01 23:59:25 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 223ms (Views: 221.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-f4683aad178f254f4ffca66b00d75f6ea5bc10fc74b063f62b22dc5cc3529113.css?body=1" for 127.0.0.1 at 2015-06-01 23:59:26 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 00:26:04 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (63.1ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (419.1ms)
+Completed 200 OK in 4032ms (Views: 3720.7ms | ActiveRecord: 63.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-02 00:28:41 -0700
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (22.3ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (142.0ms)
+Completed 200 OK in 456ms (Views: 427.1ms | ActiveRecord: 22.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-02 00:31:29 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (14.1ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (55.5ms)
+Completed 200 OK in 1266ms (Views: 1239.4ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/assets/products.self-7f2e9c5443ae2a95d92c3222b63529858ad67ca0f941c1db748ae2b82150308c.css?body=1" for 127.0.0.1 at 2015-06-02 00:31:30 -0700
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-02 00:32:02 -0700
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (13.1ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (53.7ms)
+Completed 200 OK in 1704ms (Views: 1678.5ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/assets/products.self-a1fe252a79a226ce88823bbeb0a0299deea8542b7a4120e3e14e9d258d873282.css?body=1" for 127.0.0.1 at 2015-06-02 00:32:04 -0700
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-02 00:36:13 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (3.0ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (53.5ms)
+Completed 200 OK in 986ms (Views: 974.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/products.self-0bbc8e34435c36ba3360dcd0326a6cf4596bb28cbe45c5739d46b1731822db26.css?body=1" for 127.0.0.1 at 2015-06-02 00:36:15 -0700
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-02 00:40:45 -0700
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (2.8ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (73.5ms)
+Completed 200 OK in 382ms (Views: 373.9ms | ActiveRecord: 2.8ms)

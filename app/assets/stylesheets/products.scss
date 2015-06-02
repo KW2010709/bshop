@@ -14,8 +14,8 @@
   }
 
   .list_image {
-    width:  60px;
-    height: 70px;
+    width:  180px;
+    height: 180px;
   }
 
   .list_description {
@@ -26,7 +26,7 @@
     }
 
     dt {
-      color:        #244;
+      color:        white;
       font-weight:  bold;
       font-size:    larger;
     }
@@ -43,11 +43,11 @@
   }
 
   .list_line_even {
-    background:   #e0f8f8;
+    background:  #505050;
   }
 
   .list_line_odd {
-    background:   #f8b0f8;
+    background:   black;
   }
 }
 /* END_HIGHLIGHT */

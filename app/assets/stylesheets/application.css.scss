@@ -16,48 +16,44 @@
 
 /* START_HIGHLIGHT */
 #banner {
-  background: #9c9;
+  background: #FFFFFF;
   padding: 10px;
   border-bottom: 2px solid;
-  font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282;
+  font: small-caps 30px/30px "Times New Roman", serif;
+  color: #6495ED;
   text-align: center;
-
-  img {
-    float: left;
-  }
 }
 
+
 #notice {
-  color: #000 !important;
+  color: #FF0000 !important;
   border: 2px solid red;
   padding: 1em;
   margin-bottom: 2em;
-  background-color: #f0f0f0;
+  background-color: red; 
   font: bold smaller sans-serif;
 }
 
 #columns {
-  background: #141;
+  background: white;
 
   #main {
     margin-left: 17em;
     padding: 1em;
     background: white;
-  }
-
+} 
   #side {
     float: left;
-    padding: 1em 2em;
-    width: 13em;
-    background: #141;
+    padding: 3em 2em;
+    width: 3em;
+    background: black;
 	
     ul {
       padding: 0;
       li {
         list-style: none;
         a {
-          color: #bfb;
+          color: white;
           font-size: small;
         }
       }
