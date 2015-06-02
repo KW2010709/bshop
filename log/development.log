@@ -1225,3 +1225,609 @@ Completed 200 OK in 706ms (Views: 691.6ms | ActiveRecord: 10.6ms)
 
 
 Started GET "/assets/application.self-8c9732dc9596bae386f3ffc560876d1f1b7a924caac3463443625dbf96a77896.css?body=1" for 127.0.0.1 at 2015-06-02 14:09:18 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 14:21:53 +0900
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (10.0ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (114.5ms)
+Completed 200 OK in 1347ms (Views: 1303.9ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 14:24:31 +0900
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (14.1ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (241.8ms)
+Completed 500 Internal Server Error in 295ms (ActiveRecord: 14.1ms)
+
+ActionView::Template::Error (undefined method `number_to_KRW' for #<#<Class:0x007f5ff1cc6390>:0x000000045607f8>):
+    10:     <h3><%= product.title %></h3>
+    11:     <%= sanitize(product.description) %>
+    12:     <div class="price_line">
+    13:       <span class="price"><%= number_to_KRW(product.price) %></span>
+    14:     </div>
+    15:   </div>
+    16: <% end %>
+  app/views/store/index.html.erb:13:in `block in _app_views_store_index_html_erb___3945367365410289099_36390560'
+  app/views/store/index.html.erb:7:in `_app_views_store_index_html_erb___3945367365410289099_36390560'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (99.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (55.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (35.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (340.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (6.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (4.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (9.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (256.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (13.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (24.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (460.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 14:27:44 +0900
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (3.6ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (274.1ms)
+Completed 500 Internal Server Error in 310ms (ActiveRecord: 3.6ms)
+
+ActionView::Template::Error (undefined method `number_to_ko_KR' for #<#<Class:0x007f5ff1cc6390>:0x007f5ff1cb7638>):
+    10:     <h3><%= product.title %></h3>
+    11:     <%= sanitize(product.description) %>
+    12:     <div class="price_line">
+    13:       <span class="price"><%= number_to_ko_KR(product.price) %></span>
+    14:     </div>
+    15:   </div>
+    16: <% end %>
+  app/views/store/index.html.erb:13:in `block in _app_views_store_index_html_erb___3945367365410289099_70025027629480'
+  app/views/store/index.html.erb:7:in `_app_views_store_index_html_erb___3945367365410289099_70025027629480'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (77.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (39.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (254.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (10.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (5.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (249.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (2.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (30.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (1154.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 14:29:20 +0900
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (5.0ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (48.2ms)
+Completed 200 OK in 410ms (Views: 388.9ms | ActiveRecord: 5.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCarts (20150602053343)
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150602053343"]]
+  [1m[36m (14.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLineItems (20150602053754)
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (3.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150602053754"]]
+  [1m[36m (9.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.7ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 14:50:54 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (7.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+SyntaxError (/home/lth/bshop/app/controllers/application_controller.rb:10: syntax error, unexpected keyword_rescue, expecting ')'
+    rescue ActiveRecord::RecordNotFound
+          ^):
+  app/controllers/application_controller.rb:10: syntax error, unexpected keyword_rescue, expecting ')'
+  app/controllers/store_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (74.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (32.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (20.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1041.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (35.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (3.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (196.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (2.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (3.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (443.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 14:52:07 +0900
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (5.6ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (217.4ms)
+Completed 200 OK in 3917ms (Views: 3769.3ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/assets/line_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-06-02 14:52:12 +0900
+
+
+Started GET "/assets/store.self-aae6f1dd7ca5b379ac19861a87116752f8a981b05174bfc425b6128f631b4538.css?body=1" for 127.0.0.1 at 2015-06-02 14:52:12 +0900
+
+
+Started GET "/assets/line_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-02 14:52:12 +0900
+
+
+Started POST "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 14:52:17 +0900
+Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"zhSkikKszs63M/eD55O4BrSbQEV2a0BoBvEeC6EuLydDrT4mmYBZlE8lq/YSPrR1U0yOpwaodDvrAHYp+4aPgg==", "product_id"=>"1"}
+Completed 400 Bad Request in 137ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: line_item):
+  app/controllers/line_items_controller.rb:72:in `line_item_params'
+  app/controllers/line_items_controller.rb:27:in `create'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (47.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (23.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (200.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (9.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (186.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (10.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (3.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (409.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 16:43:30 +0900
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (5.0ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (181.5ms)
+Completed 200 OK in 595ms (Views: 518.8ms | ActiveRecord: 10.4ms)
+
+
+Started POST "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 16:43:35 +0900
+
+ActionController::RoutingError (uninitialized constant LineItemsController::CurrentCart):
+  app/controllers/line_items_controller.rb:9:in `<class:LineItemsController>'
+  app/controllers/line_items_controller.rb:8:in `<top (required)>'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (26.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (358.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (8.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (8.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (163.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (6.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (449.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (778.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 16:45:56 +0900
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (13.7ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (56.6ms)
+Completed 200 OK in 444ms (Views: 426.4ms | ActiveRecord: 13.7ms)
+
+
+Started POST "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 16:46:00 +0900
+
+ActionController::RoutingError (uninitialized constant LineItemsController::CurrentCart):
+  app/controllers/line_items_controller.rb:9:in `<class:LineItemsController>'
+  app/controllers/line_items_controller.rb:8:in `<top (required)>'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (15.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (24.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (348.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (10.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (160.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (360.2ms)
+
+
+Started GET "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 16:47:04 +0900
+
+ActionController::RoutingError (uninitialized constant LineItemsController::CurrentCart):
+  app/controllers/line_items_controller.rb:8:in `<class:LineItemsController>'
+  app/controllers/line_items_controller.rb:7:in `<top (required)>'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (20.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (20.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (385.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (7.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (8.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (155.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (11.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (354.7ms)
+
+
+Started GET "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 16:47:31 +0900
+
+ActionController::RoutingError (uninitialized constant LineItemsController::CurrentCart):
+  app/controllers/line_items_controller.rb:2:in `<class:LineItemsController>'
+  app/controllers/line_items_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (21.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (20.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (17.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (576.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (5.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (148.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (351.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 16:47:36 +0900
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (11.0ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (162.9ms)
+Completed 200 OK in 1147ms (Views: 1078.8ms | ActiveRecord: 14.1ms)
+
+
+Started POST "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 16:47:41 +0900
+
+ActionController::RoutingError (uninitialized constant LineItemsController::CurrentCart):
+  app/controllers/line_items_controller.rb:2:in `<class:LineItemsController>'
+  app/controllers/line_items_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (21.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (14.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (364.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (2.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (155.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (3.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (389.4ms)
+
+
+Started GET "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 16:55:01 +0900
+
+ActionController::RoutingError (uninitialized constant LineItemsController::CurrentCart):
+  app/controllers/line_items_controller.rb:2:in `<class:LineItemsController>'
+  app/controllers/line_items_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (12.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (375.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (9.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (5.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (6.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (159.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (5.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (5.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (332.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 16:55:06 +0900
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (3.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (47.7ms)
+Completed 200 OK in 447ms (Views: 439.9ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 16:55:09 +0900
+
+ActionController::RoutingError (uninitialized constant LineItemsController::CurrentCart):
+  app/controllers/line_items_controller.rb:2:in `<class:LineItemsController>'
+  app/controllers/line_items_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (526.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (14.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (19.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (895.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (4.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (160.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (325.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 16:56:39 +0900
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (1.2ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (82.4ms)
+Completed 200 OK in 644ms (Views: 638.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 16:56:43 +0900
+
+ActionController::RoutingError (uninitialized constant LineItemsController::CurrentCart):
+  app/controllers/line_items_controller.rb:2:in `<class:LineItemsController>'
+  app/controllers/line_items_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (26.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (25.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1210.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (2.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (16.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (3.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (240.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (14.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (463.4ms)
+
+
+Started GET "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 16:57:39 +0900
+
+ActionController::RoutingError (uninitialized constant LineItemsController::CurrentCart):
+  app/controllers/line_items_controller.rb:2:in `<class:LineItemsController>'
+  app/controllers/line_items_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (14.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (13.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (371.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (13.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (185.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (4.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (5.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (853.9ms)
+
+
+Started GET "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 17:04:18 +0900
+
+ActionController::RoutingError (uninitialized constant LineItemsController::CurrentCart):
+  app/controllers/line_items_controller.rb:2:in `<class:LineItemsController>'
+  app/controllers/line_items_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (18.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (17.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (368.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (5.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (155.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (331.3ms)
+
+
+Started GET "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 17:05:47 +0900
+
+NameError (uninitialized constant Depot):
+  config/routes.rb:2:in `<top (required)>'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (28.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (30.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (157.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (8.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (7.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (9.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (7.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (202.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (11.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (417.9ms)
+
+
+Started GET "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 17:06:25 +0900
+
+ActionController::RoutingError (uninitialized constant LineItemsController::CurrentCart):
+  app/controllers/line_items_controller.rb:2:in `<class:LineItemsController>'
+  app/controllers/line_items_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (13.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (25.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (18.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (775.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (6.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (3.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (12.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (6.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (171.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (2.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (354.6ms)
+
+
+Started GET "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 17:07:29 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (uninitialized constant LineItemsController::CurrentCart):
+  app/controllers/line_items_controller.rb:2:in `<class:LineItemsController>'
+  app/controllers/line_items_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (270.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (100.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (706.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (6.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (138.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (7.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (9.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (322.4ms)
+
+
+Started GET "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 17:08:44 +0900
+
+ActionController::RoutingError (uninitialized constant LineItemsController::CurrentCart):
+  app/controllers/line_items_controller.rb:2:in `<class:LineItemsController>'
+  app/controllers/line_items_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.1ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (17.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (540.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (11.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (11.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (3.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (9.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (219.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (9.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (10.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (472.4ms)
+
+
+Started GET "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 17:11:23 +0900
+
+ActionController::RoutingError (uninitialized constant LineItemsController::CurrentCart):
+  app/controllers/concerns/line_items_controller.rb:2:in `<class:LineItemsController>'
+  app/controllers/concerns/line_items_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (18.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (26.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (403.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (4.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (7.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (149.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (7.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (350.8ms)
+
+
+Started GET "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 17:12:41 +0900
+Processing by LineItemsController#index as HTML
+  Parameters: {"product_id"=>"1"}
+  [1m[35mLineItem Load (5.6ms)[0m  SELECT "line_items".* FROM "line_items"
+  Rendered line_items/index.html.erb within layouts/application (352.1ms)
+Completed 200 OK in 2597ms (Views: 2538.0ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/line_items/new" for 127.0.0.1 at 2015-06-02 17:12:57 +0900
+Processing by LineItemsController#new as HTML
+  Rendered line_items/_form.html.erb (80.5ms)
+  Rendered line_items/new.html.erb within layouts/application (86.7ms)
+Completed 200 OK in 368ms (Views: 311.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 17:13:03 +0900
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (582.9ms)
+Completed 200 OK in 1050ms (Views: 1036.7ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 17:13:07 +0900
+Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"u/pDdmQ0VTIrSS9Ai2QsMWrWH25il1aOaUR+0UfCR+g2Q9navxjCaNNfczV+ySBCjQHRjBJUYt2EtRbzHWrnTQ==", "product_id"=>"1"}
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `many' for Cart(id: integer, created_at: datetime, updated_at: datetime):Class):
+  app/models/cart.rb:2:in `<class:Cart>'
+  app/models/cart.rb:1:in `<top (required)>'
+  app/controllers/concerns/current_cart.rb:15:in `set_cart'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (473.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (582.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (11.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (7.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (10.0ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (187.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (5.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (375.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 17:14:19 +0900
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (4.8ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (109.6ms)
+Completed 200 OK in 447ms (Views: 388.6ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/line_items?product_id=1" for 127.0.0.1 at 2015-06-02 17:14:22 +0900
+Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"fJpE+x7MxoJGDM7oeOQ9oXvvIyVJengQ6VnuoNd2eefxI95XxeBR2L4akp2NSTHSnDjtxzm5TEMEqIaCjd7ZQg==", "product_id"=>"1"}
+  [1m[36mCart Load (0.7ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", nil]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-06-02 08:14:22.951370"], ["updated_at", "2015-06-02 08:14:22.951370"]]
+  [1m[35m (11.3ms)[0m  commit transaction
+  [1m[36mProduct Load (9.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["product_id", 1], ["cart_id", 1], ["created_at", "2015-06-02 08:14:23.594978"], ["updated_at", "2015-06-02 08:14:23.594978"]]
+  [1m[35m (14.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/carts/1
+Completed 302 Found in 811ms (ActiveRecord: 48.2ms)
+
+
+Started GET "/carts/1" for 127.0.0.1 at 2015-06-02 17:14:23 +0900
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCart Load (5.7ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLineItem Load (7.6ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 1]]
+  [1m[36mProduct Load (5.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered carts/show.html.erb within layouts/application (68.6ms)
+Completed 200 OK in 466ms (Views: 434.9ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/carts" for 127.0.0.1 at 2015-06-02 17:14:30 +0900
+Processing by CartsController#index as HTML
+  [1m[35mCart Load (0.5ms)[0m  SELECT "carts".* FROM "carts"
+  Rendered carts/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 260ms (Views: 252.6ms | ActiveRecord: 0.5ms)

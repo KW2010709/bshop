@@ -1,0 +1,3 @@
+class Cart < ActiveRecord::Base
+   has many :line_items, dependant: :destroy
+end
