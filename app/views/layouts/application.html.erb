@@ -22,12 +22,7 @@
     <%= @page_title || "U Drink ME? I Drink U!" %> 
   </div>
   <div id="columns">
-    <div id="side">
-<!-- START_HIGHLIGHT -->
-      <div id="cart">
-        <%= render @cart %>
-      </div>
-     </div>
+    
 <!-- END_HIGHLIGHT -->  
     <div id="topMenu">
       <ul>
@@ -38,7 +33,13 @@
         <li><a class="menuLInk" href="http://www..../faq">Q&A</a></li>
         <li><a class="menuLInk" href="http://www..../news">알림판</a></li>
         <li><a class="menuLInk" href="http://www..../contact">Contact</a></li>    </ul>
-    </div>
+    </div> <br>
+<div id="side">
+<!-- START_HIGHLIGHT -->
+      <div id="cart">
+        <%= render @cart %>
+      </div>
+     </div>
     <div id="main">
 <!-- END_HIGHLIGHT -->
       <%= yield %><!-- <label id="code.depot.e.include"/> -->
