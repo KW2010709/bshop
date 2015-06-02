@@ -4310,3 +4310,79 @@ Migrating to CombineItemsInCart (20150602120302)
 =======
 >>>>>>> 753513f4176ad07dfe187d8ffef8a61c36cc8afe
 >>>>>>> 3ba5607274fbb58168c1e08f814487e04544fffa
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 22:17:31 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (0.6ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", nil]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (8.1ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-06-02 13:17:32.870609"], ["updated_at", "2015-06-02 13:17:32.870609"]]
+  [1m[36m (14.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mProduct Load (2.0ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (380.2ms)
+  [1m[36mLineItem Load (0.5ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 3]]
+  Rendered collection (0.1ms)
+  Rendered carts/_cart.html.erb (85.6ms)
+Completed 200 OK in 2410ms (Views: 2114.2ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 22:26:26 +0900
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (7.3ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (436.0ms)
+Completed 500 Internal Server Error in 705ms (ActiveRecord: 8.0ms)
+
+ActionView::Template::Error (Invalid CSS after "...ND_HIGHLIGHT */": expected "}", was ""):
+     9:   ul li{float:left; margin-right:90px}
+    10:   ul li a{font-size:21px; text-align: center;  color:white; font-weight:bold; text-decoration:none}
+    11: .menuLink a{color:#fff}</style> <!-- END_HIGHLIGHT -->
+    12:   <!-- <label id="code.slt"/> --><%= stylesheet_link_tag    "application", media: "all",
+    13:     "data-turbolinks-track" => true %>
+    14:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %><!-- <label id="code.jlt"/> -->
+    15:   <%= csrf_meta_tags %><!-- <label id="code.csrf"/> -->
+  app/assets/stylesheets/carts.scss:18
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb___382386186406136295_47569000'
+
+
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (298.8ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (30.6ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (430.9ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (6.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (10.7ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (150.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /home/lth/.rvm/gems/ruby-2.0.0-p643/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (286.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 22:27:34 +0900
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (4.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mProduct Load (0.9ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (107.4ms)
+  [1m[35mLineItem Load (0.4ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 3]]
+  Rendered collection (0.1ms)
+  Rendered carts/_cart.html.erb (13.4ms)
+Completed 200 OK in 885ms (Views: 865.7ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/application.self-6d2b727d2c1baa08e4a062575c41dc9d758df32b5ac1920f3e63fff643b7dedd.css?body=1" for 127.0.0.1 at 2015-06-02 22:27:35 +0900
+
+
+Started GET "/assets/carts.self-9c25622e0efaead5d095c3824fce5fd86013d175c2da6ea0133eff80100cd852.css?body=1" for 127.0.0.1 at 2015-06-02 22:27:35 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 22:29:10 +0900
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (2.3ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mProduct Load (0.7ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (106.7ms)
+  [1m[36mLineItem Load (5.6ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 3]]
+  Rendered collection (0.1ms)
+  Rendered carts/_cart.html.erb (19.9ms)
+Completed 200 OK in 715ms (Views: 696.7ms | ActiveRecord: 8.6ms)

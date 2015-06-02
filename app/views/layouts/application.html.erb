@@ -22,7 +22,13 @@
     <%= @page_title || "U Drink ME? I Drink U!" %> 
   </div>
   <div id="columns">
-  
+    <div id="side">
+<!-- START_HIGHLIGHT -->
+      <div id="cart">
+        <%= render @cart %>
+      </div>
+     </div>
+<!-- END_HIGHLIGHT -->  
     <div id="topMenu">
       <ul>
         <li><a class="menuLInk" href="http://www....">Home</a></li>
