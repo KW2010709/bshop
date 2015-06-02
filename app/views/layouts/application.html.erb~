@@ -1,0 +1,38 @@
+f
+<!-- START:head -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- START_HIGHLIGHT -->
+  <title>Bshop</title>
+<!-- END_HIGHLIGHT -->
+  <!-- <label id="code.slt"/> --><%= stylesheet_link_tag    "application", media: "all",
+    "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %><!-- <label id="code.jlt"/> -->
+  <%= csrf_meta_tags %><!-- <label id="code.csrf"/> -->
+</head>
+<!-- END:head -->
+<body class="<%= controller.controller_name %>">
+<!-- START_HIGHLIGHT -->
+  <div id="banner">
+    <%= image_tag("http://postfiles11.naver.net/20150518_218/knnk6807_1431956450490ATkKf_JPEG/pic1.jpg?type=w3") %>
+    <%= @page_title || "Bottle Shop" %><!-- <label id="code.depot.e.title"/> -->
+  </div>
+  <div id="columns">
+    <div id="side">
+      <ul>
+        <li><a href="http://www....">Home</a></li>
+        <li><a href="http://www..../faq">Questions</a></li>
+        <li><a href="http://www..../news">News</a></li>
+        <li><a href="http://www..../contact">Contact</a></li>
+      </ul>
+    </div>
+    <div id="main">
+<!-- END_HIGHLIGHT -->
+      <%= yield %><!-- <label id="code.depot.e.include"/> -->
+<!-- START_HIGHLIGHT -->
+    </div>
+  </div>
+<!-- END_HIGHLIGHT -->
+</body>
+</html>
