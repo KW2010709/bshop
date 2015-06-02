@@ -1,10 +1,10 @@
-f
+
 <!-- START:head -->
 <!DOCTYPE html>
 <html>
 <head>
 <!-- START_HIGHLIGHT -->
-  <title>Bshop</title>
+  <title>YD?ID!</title>
 <!-- END_HIGHLIGHT -->
   <!-- <label id="code.slt"/> --><%= stylesheet_link_tag    "application", media: "all",
     "data-turbolinks-track" => true %>
@@ -15,15 +15,15 @@ f
 <body class="<%= controller.controller_name %>">
 <!-- START_HIGHLIGHT -->
   <div id="banner">
-    <%= image_tag("http://postfiles11.naver.net/20150518_218/knnk6807_1431956450490ATkKf_JPEG/pic1.jpg?type=w3") %>
-    <%= @page_title || "Bottle Shop" %><!-- <label id="code.depot.e.title"/> -->
-  </div>
+    <%= image_tag("http://postfiles11.naver.net/20150518_218/knnk6807_1431956450490ATkKf_JPEG/pic1.jpg?type=w3", size: "200x100") %>
+   </div>
   <div id="columns">
     <div id="side">
       <ul>
         <li><a href="http://www....">Home</a></li>
-        <li><a href="http://www..../faq">Questions</a></li>
-        <li><a href="http://www..../news">News</a></li>
+        <li><a href="http://www..../product">Bottles</a></li>
+        <li><a href="http://www..../faq">Q&A</a></li>
+        <li><a href="http://www..../news">알림판</a></li>
         <li><a href="http://www..../contact">Contact</a></li>
       </ul>
     </div>
