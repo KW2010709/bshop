@@ -2610,6 +2610,7 @@ Completed 200 OK in 382ms (Views: 373.9ms | ActiveRecord: 2.8ms)
 >>>>>>> 82799603f1a5f055b8df7ee01a5ba8b828162d3f
 
 
+<<<<<<< HEAD
 Started GET "/carts" for 127.0.0.1 at 2015-06-02 18:38:20 +0900
   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by CartsController#index as HTML
@@ -3563,3 +3564,429 @@ Processing by StoreController#index as HTML
   [1m[35mProduct Load (1.3ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
   Rendered store/index.html.erb within layouts/application (52.1ms)
 Completed 200 OK in 1017ms (Views: 1012.1ms | ActiveRecord: 1.3ms)
+=======
+Started GET "/" for 127.0.0.1 at 2015-06-02 20:39:23 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (76.1ms)
+Completed 200 OK in 1169ms (Views: 1120.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-02 20:39:43 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (6.6ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 160ms (Views: 151.5ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2015-06-02 20:39:52 -0700
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (2.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/_form.html.erb (31.9ms)
+  Rendered products/edit.html.erb within layouts/application (46.1ms)
+Completed 200 OK in 169ms (Views: 135.6ms | ActiveRecord: 2.3ms)
+
+
+Started PATCH "/products/1" for 127.0.0.1 at 2015-06-02 20:41:39 -0700
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tpaW4rP9ows0qhbRr5grNnpaJJ8w+IFV7+layWrAB+0ByRPfnSr/L/qCLSOY2PL+C3CUpq7wpczQXCMZY8P2Mw==", "product"=>{"title"=>"스미노프 그린애플", "description"=>"원산지 : 미국<br>\r\n용량 : 700ml<br>\r\n알콜도수 : 35%", "image_url"=>"http://postfiles13.naver.net/20150518_140/knnk6807_1431956449655D22h5_JPEG/b3.jpg?type=w3", "price"=>"26000"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mProduct Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."title" = '스미노프 그린애플' AND "products"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered products/_form.html.erb (29.0ms)
+  Rendered products/edit.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 205ms (Views: 136.8ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/products/1" for 127.0.0.1 at 2015-06-02 20:42:00 -0700
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Of0gt+lHAbdZ9uOIrV446MjtN9CaEQsfHfMHWdhtQh+OoqWKx5Bdk5fe2HqaHuEguceH6QQZL4YiRn6J0W6zwQ==", "product"=>{"title"=>"스미노프 그린", "description"=>"원산지 : 미국<br>\r\n용량 : 700ml<br>\r\n알콜도수 : 35%", "image_url"=>"http://postfiles13.naver.net/20150518_140/knnk6807_1431956449655D22h5_JPEG/b3.jpg?type=w3", "price"=>"26000"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProduct Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."title" = '스미노프 그린' AND "products"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered products/_form.html.erb (35.2ms)
+  Rendered products/edit.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 187ms (Views: 145.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-06-02 20:42:11 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 206ms (Views: 197.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-02 20:42:15 -0700
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 112ms (Views: 110.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2015-06-02 20:42:19 -0700
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/_form.html.erb (5.6ms)
+  Rendered products/edit.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 133ms (Views: 126.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/products/1" for 127.0.0.1 at 2015-06-02 20:43:05 -0700
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kPErdVV9ZnXSO4kjFwA+wouLeaWMFDdNT9ofw2mDEUwnrq5Ie6o6URwTstEgQOcK+qHJnBIcE9Rwb2YTYIDgkg==", "product"=>{"title"=>"스미노프 그린", "description"=>"· 원산지 : 미국 <br>\r\n· 용량 : 700ml\r\n· 알콜도수 : 35%", "image_url"=>"http://postfiles13.naver.net/20150518_140/knnk6807_1431956449655D22h5_JPEG/b3.jpg?type=w3", "price"=>"26000"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Exists (13.3ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."title" = '스미노프 그린' AND "products"."id" != 1) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered products/_form.html.erb (10.7ms)
+  Rendered products/edit.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 187ms (Views: 129.1ms | ActiveRecord: 13.9ms)
+
+
+Started PATCH "/products/1" for 127.0.0.1 at 2015-06-02 20:43:16 -0700
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HfjgVYd2V3GKTHMItGumchoVUr46uhcnYYHd0BOf8iOqp2VoqaELVURkSPqDK3+6az/ih6SyM75eNKQAGpwD/Q==", "product"=>{"title"=>"스미노프 그린애플", "description"=>"· 원산지 : 미국 <br>\r\n· 용량 : 700ml\r\n· 알콜도수 : 35%", "image_url"=>"http://postfiles13.naver.net/20150518_140/knnk6807_1431956449655D22h5_JPEG/b3.jpg?type=w3", "price"=>"26000"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Exists (10.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."title" = '스미노프 그린애플' AND "products"."id" != 1) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered products/_form.html.erb (31.9ms)
+  Rendered products/edit.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 186ms (Views: 141.3ms | ActiveRecord: 10.8ms)
+
+
+Started PATCH "/products/1" for 127.0.0.1 at 2015-06-02 20:43:18 -0700
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uvmj+kWyXngpe6bd35J3Ag3Qe/9/GwvPxF0oW4TuVNQNpibHa2UCXOdTnS/o0q7KfPrLxuETL1b76FGLje2lCg==", "product"=>{"title"=>"스미노프 그린애플", "description"=>"· 원산지 : 미국 <br>\r\n· 용량 : 700ml\r\n· 알콜도수 : 35%", "image_url"=>"http://postfiles13.naver.net/20150518_140/knnk6807_1431956449655D22h5_JPEG/b3.jpg?type=w3", "price"=>"26000"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[35mProduct Load (8.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Exists (0.8ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."title" = '스미노프 그린애플' AND "products"."id" != 1) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered products/_form.html.erb (17.7ms)
+  Rendered products/edit.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 235ms (Views: 187.2ms | ActiveRecord: 9.1ms)
+
+
+Started PATCH "/products/1" for 127.0.0.1 at 2015-06-02 20:43:25 -0700
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0eOcJLb3aniUcgzq4J+8wSFhrfHCd/0yye97gv3E81VmvBkZmCA2XFpaNxjX32UJUEsdyFx/2av2WgJS9McCiw==", "product"=>{"title"=>"스미노프 그린애플 700ml", "description"=>"· 원산지 : 미국 <br>\r\n· 용량 : 700ml\r\n· 알콜도수 : 35%", "image_url"=>"http://postfiles13.naver.net/20150518_140/knnk6807_1431956449655D22h5_JPEG/b3.jpg?type=w3", "price"=>"26000"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (8.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Exists (8.6ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."title" = '스미노프 그린애플 700ml' AND "products"."id" != 1) LIMIT 1
+  [1m[36mSQL (4.8ms)[0m  [1mUPDATE "products" SET "title" = ?, "description" = ?, "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["title", "스미노프 그린애플 700ml"], ["description", "· 원산지 : 미국 <br>\r\n· 용량 : 700ml\r\n· 알콜도수 : 35%"], ["price", 26000.0], ["updated_at", "2015-06-03 03:43:25.868914"], ["id", 1]]
+  [1m[35m (18.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 72ms (ActiveRecord: 40.7ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-06-02 20:43:25 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 122ms (Views: 119.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-02 20:43:29 -0700
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.7ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 173ms (Views: 167.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-06-02 20:43:45 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 120ms (Views: 116.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2015-06-02 20:43:49 -0700
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/_form.html.erb (11.4ms)
+  Rendered products/edit.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 118ms (Views: 108.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/products/1" for 127.0.0.1 at 2015-06-02 20:44:02 -0700
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NhEORcbVaReZ8MLMbGlJopH40KdjROgYu57d1qxAFjeBTot46AI1M1fY+T5bKZBq4NJgnv1MzIGEK6QGpUPn6Q==", "product"=>{"title"=>"스미노프 그린애플 700ml", "description"=>"· 원산지 : 미국 · 용량 : 700ml · 알콜도수 : 35%", "image_url"=>"http://postfiles13.naver.net/20150518_140/knnk6807_1431956449655D22h5_JPEG/b3.jpg?type=w3", "price"=>"26000.0"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProduct Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."title" = '스미노프 그린애플 700ml' AND "products"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "products" SET "description" = ?, "updated_at" = ? WHERE "products"."id" = ?  [["description", "· 원산지 : 미국 · 용량 : 700ml · 알콜도수 : 35%"], ["updated_at", "2015-06-03 03:44:02.358917"], ["id", 1]]
+  [1m[36m (10.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 66ms (ActiveRecord: 11.9ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-06-02 20:44:02 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 160ms (Views: 156.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-02 20:44:04 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (2.5ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 111ms (Views: 106.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/products/2/edit" for 127.0.0.1 at 2015-06-02 20:44:13 -0700
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered products/_form.html.erb (12.7ms)
+  Rendered products/edit.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 164ms (Views: 151.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/products/2" for 127.0.0.1 at 2015-06-02 20:44:53 -0700
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NJ4RKCa5WGYZsnp0ZHyEP8rOUU4O5NKM8+C+fLEU+T+DwZQVCG4EQteaQYZTPF33u+Thd5Ds9hXMVcesuBcI4Q==", "product"=>{"title"=>"예거마스터 (Jägermeister) 700ml", "description"=>"· 원산지 : 독일\r\n· 용량 : 700ml\r\n· 알콜도수 : 35%", "image_url"=>"http://postfiles5.naver.net/20150518_244/knnk6807_1431956448036lTELn_JPEG/b1.jpg?type=w3", "price"=>"29000"}, "commit"=>"Update Product", "id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mProduct Exists (6.5ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."title" = '예거마스터 (Jägermeister) 700ml' AND "products"."id" != 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "products" SET "title" = ?, "description" = ?, "price" = ?, "updated_at" = ? WHERE "products"."id" = ?  [["title", "예거마스터 (Jägermeister) 700ml"], ["description", "· 원산지 : 독일\r\n· 용량 : 700ml\r\n· 알콜도수 : 35%"], ["price", 29000.0], ["updated_at", "2015-06-03 03:44:53.800921"], ["id", 2]]
+  [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 66ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2015-06-02 20:44:53 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 150ms (Views: 147.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-02 20:44:56 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 183ms (Views: 178.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 20:45:06 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 220ms (Views: 218.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-06-02 20:45:47 -0700
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (20.1ms)
+  Rendered products/new.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 135ms (Views: 133.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2015-06-02 20:47:43 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UmKzYzWG7dOGdBosRr1iZ8kob759SZte6n1Y+2BCvynlPTZeG1Gx90hcId5x/buvuALfh+NBv8fVyCEraUFO9w==", "product"=>{"title"=>"그레이구스 보드카 750ml", "description"=>"· 원산지 : 프랑스\r\n· 용량 : 750ml\r\n· 알콜도수 : 40%", "image_url"=>"http://postfiles12.naver.net/20150602_219/knnk6807_1433232232137PDeYc_JPEG/%B1%D7%B7%B9%C0%CC%B1%B8%BD%BA_%BA%B8%B5%E5%C4%AB.jpg?type=w3", "price"=>"59000"}, "commit"=>"Create Product"}
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Exists (0.4ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."title" = '그레이구스 보드카 750ml' LIMIT 1
+  [1m[36mSQL (4.7ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "그레이구스 보드카 750ml"], ["description", "· 원산지 : 프랑스\r\n· 용량 : 750ml\r\n· 알콜도수 : 40%"], ["image_url", "http://postfiles12.naver.net/20150602_219/knnk6807_1433232232137PDeYc_JPEG/%B1%D7%B7%B9%C0%CC%B1%B8%BD%BA_%BA%B8%B5%E5%C4%AB.jpg?type=w3"], ["price", 59000.0], ["created_at", "2015-06-03 03:47:43.061907"], ["updated_at", "2015-06-03 03:47:43.061907"]]
+  [1m[35m (15.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/products/3
+Completed 302 Found in 68ms (ActiveRecord: 21.6ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2015-06-02 20:47:43 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered products/show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 157ms (Views: 153.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-02 20:47:44 -0700
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 166ms (Views: 160.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-02 20:52:09 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 597ms (Views: 554.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 20:52:32 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (2.6ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (66.5ms)
+Completed 200 OK in 193ms (Views: 188.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2015-06-02 20:52:53 -0700
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/_form.html.erb (24.1ms)
+  Rendered products/edit.html.erb within layouts/application (46.1ms)
+Completed 200 OK in 201ms (Views: 150.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/products/1" for 127.0.0.1 at 2015-06-02 20:53:09 -0700
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kXsQWsSwyIXdKTQvjGg5m7gQMTFvSBQtik8Tc9tFBUAmJJVn6meUoRMBD927KOBTyTqBCPFAMLS1+mqj0kb0ng==", "product"=>{"title"=>"스미노프 그린애플 700ml", "description"=>"                    · 원산지 : 미국 · 용량 : 700ml · 알콜도수 : 35%", "image_url"=>"http://postfiles13.naver.net/20150518_140/knnk6807_1431956449655D22h5_JPEG/b3.jpg?type=w3", "price"=>"26000.0"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[36mProduct Load (3.7ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mProduct Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."title" = '스미노프 그린애플 700ml' AND "products"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "products" SET "description" = ?, "updated_at" = ? WHERE "products"."id" = ?  [["description", "                    · 원산지 : 미국 · 용량 : 700ml · 알콜도수 : 35%"], ["updated_at", "2015-06-03 03:53:09.634979"], ["id", 1]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 93ms (ActiveRecord: 18.9ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-06-02 20:53:09 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (2.8ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 126ms (Views: 120.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-02 20:53:11 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (2.8ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 401ms (Views: 396.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 20:53:18 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 168ms (Views: 162.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 20:53:22 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 158ms (Views: 152.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-06-02 20:53:53 -0700
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (9.5ms)
+  Rendered products/new.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 142ms (Views: 131.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2015-06-02 20:56:01 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QK5/0goaMXEOfZbzqJiIDUr+r5h/mJ9H76NZD2DYZ2f38frvJM1tVcBVrQGf2FHFO9QfoeGQu97QFiDfaduWuQ==", "product"=>{"title"=>"블루넌 아이스바인 375ml", "description"=>"· 원산지 : 독일\r\n· 용량 : 375ml\r\n· 알콜도수 : 8%", "image_url"=>"http://postfiles10.naver.net/20150602_169/knnk6807_1433232232405hna0W_JPEG/%BA%ED%B7%E7%B3%CD_%BE%C6%C0%CC%BD%BA%B9%D9%C0%CE_%BF%CD%C0%CE.jpg?type=w3", "price"=>"35000"}, "commit"=>"Create Product"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProduct Exists (9.7ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."title" = '블루넌 아이스바인 375ml' LIMIT 1[0m
+  [1m[35mSQL (7.9ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "블루넌 아이스바인 375ml"], ["description", "· 원산지 : 독일\r\n· 용량 : 375ml\r\n· 알콜도수 : 8%"], ["image_url", "http://postfiles10.naver.net/20150602_169/knnk6807_1433232232405hna0W_JPEG/%BA%ED%B7%E7%B3%CD_%BE%C6%C0%CC%BD%BA%B9%D9%C0%CE_%BF%CD%C0%CE.jpg?type=w3"], ["price", 35000.0], ["created_at", "2015-06-03 03:56:01.158805"], ["updated_at", "2015-06-03 03:56:01.158805"]]
+  [1m[36m (19.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/4
+Completed 302 Found in 74ms (ActiveRecord: 37.1ms)
+
+
+Started GET "/products/4" for 127.0.0.1 at 2015-06-02 20:56:01 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered products/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 136ms (Views: 128.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-02 20:56:02 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 163ms (Views: 153.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-06-02 20:56:07 -0700
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (7.3ms)
+  Rendered products/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 97ms (Views: 95.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2015-06-02 20:57:02 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ch8D03StuVs1z/GfUOpzUzKy7OpHPSuArV0Z6v+ofm+9QIbuWnrlf/vnym1nqqqbQ5hc09k1DxmS6GA69quPsQ==", "product"=>{"title"=>"비나리 아이스와인 500ml", "description"=>"· 원산지 : 불가리아\r\n· 용량 : 500ml\r\n· 알콜도수 : 11%", "image_url"=>"http://postfiles11.naver.net/20150602_202/knnk6807_14332322325848Mcl7_JPEG/%BA%F1%B3%AA%B8%AE_%BE%C6%C0%CC%BD%BA%BF%CD%C0%CE.jpg?type=w3", "price"=>"23000"}, "commit"=>"Create Product"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mProduct Exists (10.5ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."title" = '비나리 아이스와인 500ml' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "비나리 아이스와인 500ml"], ["description", "· 원산지 : 불가리아\r\n· 용량 : 500ml\r\n· 알콜도수 : 11%"], ["image_url", "http://postfiles11.naver.net/20150602_202/knnk6807_14332322325848Mcl7_JPEG/%BA%F1%B3%AA%B8%AE_%BE%C6%C0%CC%BD%BA%BF%CD%C0%CE.jpg?type=w3"], ["price", 23000.0], ["created_at", "2015-06-03 03:57:02.510683"], ["updated_at", "2015-06-03 03:57:02.510683"]]
+  [1m[36m (9.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/5
+Completed 302 Found in 56ms (ActiveRecord: 20.7ms)
+
+
+Started GET "/products/5" for 127.0.0.1 at 2015-06-02 20:57:02 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered products/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 320ms (Views: 314.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-02 20:57:04 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 121ms (Views: 119.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-06-02 20:57:09 -0700
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (10.7ms)
+  Rendered products/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 113ms (Views: 112.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2015-06-02 20:57:52 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZtoDybZb5HQ2W1njzow7b4sg/3jwVwbgZYL9yFMmrUzRhYb0mIy4UPhzYhH5zOKn+gpPQW5fInlaN4QYWiVckg==", "product"=>{"title"=>"빈야드 (VINYARD) 750ml", "description"=>"· 원산지 : 스페인\r\n· 용량 : 750ml\r\n· 알콜도수 : 12%", "image_url"=>"http://postfiles15.naver.net/20150602_286/knnk6807_1433232232790W5LMS_JPEG/%BA%F3%BE%DF%B5%E5_%BF%CD%C0%CE.jpg?type=w3", "price"=>"15000"}, "commit"=>"Create Product"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mProduct Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."title" = '빈야드 (VINYARD) 750ml' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "빈야드 (VINYARD) 750ml"], ["description", "· 원산지 : 스페인\r\n· 용량 : 750ml\r\n· 알콜도수 : 12%"], ["image_url", "http://postfiles15.naver.net/20150602_286/knnk6807_1433232232790W5LMS_JPEG/%BA%F3%BE%DF%B5%E5_%BF%CD%C0%CE.jpg?type=w3"], ["price", 15000.0], ["created_at", "2015-06-03 03:57:52.112230"], ["updated_at", "2015-06-03 03:57:52.112230"]]
+  [1m[36m (6.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/6
+Completed 302 Found in 54ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/products/6" for 127.0.0.1 at 2015-06-02 20:57:52 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered products/show.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 177ms (Views: 166.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-02 20:57:53 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 162ms (Views: 160.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-06-02 20:57:56 -0700
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (11.5ms)
+  Rendered products/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 134ms (Views: 131.6ms | ActiveRecord: 0.0ms)
+>>>>>>> 26c0979064568d6aff9bc93363137ad23267431a
