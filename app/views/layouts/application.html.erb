@@ -11,8 +11,7 @@
 .menuLink a{color:#fff}</style> <!-- END_HIGHLIGHT -->
   <!-- <label id="code.slt"/> --><%= stylesheet_link_tag    "application", media: "all",
     "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %><!-- <label id="code.jlt"/> -->
-  <%= csrf_meta_tags %><!-- <label id="code.csrf"/> -->
+  <%= csrf_meta_tags %>
 </head>
 <!-- END:head -->
 <body class="<%= controller.controller_name %>">
@@ -21,9 +20,8 @@
     <%= image_tag("http://postfiles11.naver.net/20150518_218/knnk6807_1431956450490ATkKf_JPEG/pic1.jpg?type=w3", size:"200x100") %>
     <%= @page_title || "U Drink ME? I Drink U!" %> 
   </div>
-  <div id="columns">
-    
 <!-- END_HIGHLIGHT -->  
+  <div id="columns">
     <div id="topMenu">
       <ul>
         <li><a class="menuLInk" href="http://www....">Home</a></li>
@@ -34,14 +32,18 @@
         <li><a class="menuLInk" href="http://www..../news">알림판</a></li>
         <li><a class="menuLInk" href="http://www..../contact">Contact</a></li>    </ul>
     </div> <br>
-<div id="side">
-<!-- START_HIGHLIGHT -->
-      <div id="cart">
+   <div id="side">
+     <!-- START_HIGHLIGHT -->
+       <!-- START:hidden_div -->
+      <%if @cart %>
+      <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
         <%= render @cart %>
-      </div>
+      <% end %>
+      <% end %>
+       <!-- END:hidden_div -->
+     <!-- END_HIGHLIGHT -->      
      </div>
-    <div id="main">
-<!-- END_HIGHLIGHT -->
+         <div id="main">
       <%= yield %><!-- <label id="code.depot.e.include"/> -->
 <!-- START_HIGHLIGHT -->
     </div>
