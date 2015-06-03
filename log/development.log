@@ -4212,3 +4212,17 @@ Completed 200 OK in 203ms (Views: 196.3ms | ActiveRecord: 1.6ms)
 =======
 >>>>>>> 26c0979064568d6aff9bc93363137ad23267431a
 >>>>>>> 8073340bd17facc022e5b8b1f2d5a30e9e92a5a8
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddQuantityToLineItems (20150602115248)
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36m (3.4ms)[0m  [1mALTER TABLE "line_items" ADD "quantity" integer DEFAULT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150602115248"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+Migrating to CombineItemsInCart (20150602120302)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT "carts".* FROM "carts"[0m
+  [1m[35m (0.5ms)[0m  SELECT SUM("line_items"."quantity") AS sum_quantity, product_id AS product_id FROM "line_items" WHERE "line_items"."cart_id" = ? GROUP BY "line_items"."product_id"  [["cart_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("line_items"."quantity") AS sum_quantity, product_id AS product_id FROM "line_items" WHERE "line_items"."cart_id" = ? GROUP BY "line_items"."product_id"[0m  [["cart_id", 2]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150602120302"]]
+  [1m[36m (5.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
