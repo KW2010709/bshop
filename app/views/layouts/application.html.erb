@@ -4,8 +4,12 @@
 <html>
 <head>
 <!-- START_HIGHLIGHT -->
-  <title>YD?ID!</title>
-<!-- END_HIGHLIGHT -->
+  <title>UDM?IDU!</title>
+<style> 
+  ul{width:1000px; height:30px; background:black; list-style:none; padding-top:15px}
+  ul li{float:left; margin-right:90px}
+  ul li a{font-size:21px; text-align: center;  color:white; font-weight:bold; text-decoration:none}
+.menuLink a{color:#fff}</style> <!-- END_HIGHLIGHT -->
   <!-- <label id="code.slt"/> --><%= stylesheet_link_tag    "application", media: "all",
     "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %><!-- <label id="code.jlt"/> -->
@@ -19,21 +23,23 @@
     <%= @page_title || "U Drink ME? I Drink U!" %> 
   </div>
   <div id="columns">
-    <div id="side">
+  
+    <div id="topMenu">
       <ul>
-        <li><a href="http://www....">Home</a></li><br>
-        <li><a href="http://www..../product">Bottles</a></li><br>
-        <li><a href="http://www..../faq">Q&A</a></li><br>
-        <li><a href="http://www..../news">알림판</a></li><br>
-        <li><a href="http://www..../contact">Contact</a></li>
-      </ul>
+        <li><a class="menuLInk" href="http://www....">Home</a></li>
+        <li><a class="menuLInk" href="http://www..../product">소주</a></li>
+        <li><a class="menuLInk" href="http://www..../product">와인</a></li>
+        <li><a class="menuLInk" href="http://www..../product">보드카</a></li>
+        <li><a class="menuLInk" href="http://www..../faq">Q&A</a></li>
+        <li><a class="menuLInk" href="http://www..../news">알림판</a></li>
+        <li><a class="menuLInk" href="http://www..../contact">Contact</a></li>    </ul>
     </div>
     <div id="main">
 <!-- END_HIGHLIGHT -->
       <%= yield %><!-- <label id="code.depot.e.include"/> -->
 <!-- START_HIGHLIGHT -->
     </div>
-  </div>
+ </div> 
 <!-- END_HIGHLIGHT -->
 </body>
 </html>

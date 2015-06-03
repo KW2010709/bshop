@@ -3034,3 +3034,222 @@ Processing by ProductsController#new as HTML
   Rendered products/_form.html.erb (11.5ms)
   Rendered products/new.html.erb within layouts/application (18.9ms)
 Completed 200 OK in 134ms (Views: 131.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:09:50 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (73.3ms)
+Completed 200 OK in 775ms (Views: 738.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.self-4adb4fd33f7e039e421fd149afe8face4de49f43be41b73dba23927b8dd902f6.css?body=1" for 127.0.0.1 at 2015-06-02 21:09:51 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:15:00 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.8ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 467ms (Views: 463.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-283e852d34db800bd97d42873a2071a995e58a5f130a452088e0f1d108cc0f21.css?body=1" for 127.0.0.1 at 2015-06-02 21:15:00 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:16:47 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (50.6ms)
+Completed 200 OK in 179ms (Views: 176.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:17:32 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (6.1ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 200ms (Views: 190.3ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:19:52 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (57.2ms)
+Completed 200 OK in 194ms (Views: 187.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:19:56 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (48.9ms)
+Completed 200 OK in 188ms (Views: 185.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:20:00 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (60.1ms)
+Completed 200 OK in 253ms (Views: 250.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:21:14 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.8ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (62.1ms)
+Completed 200 OK in 291ms (Views: 289.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:28:35 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (4.1ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (54.1ms)
+Completed 200 OK in 227ms (Views: 220.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:30:37 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (5.3ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 268ms (Views: 260.5ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/application.self-4b439f8c122ceb2b9179ca81c6f0177bba88184006801c9271120fce78cdf663.css?body=1" for 127.0.0.1 at 2015-06-02 21:30:38 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:33:18 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (63.7ms)
+Completed 200 OK in 242ms (Views: 235.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:34:08 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 220ms (Views: 212.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:35:35 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (6.1ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 216ms (Views: 207.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:36:21 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (9.7ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (58.4ms)
+Completed 200 OK in 194ms (Views: 180.5ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-02 21:36:49 -0700
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.8ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (49.9ms)
+Completed 200 OK in 193ms (Views: 187.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:38:55 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (3.6ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 208ms (Views: 202.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:39:17 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (4.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (69.8ms)
+Completed 200 OK in 204ms (Views: 193.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:40:16 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (6.0ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (57.1ms)
+Completed 200 OK in 216ms (Views: 200.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:42:10 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (0.8ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (65.5ms)
+Completed 200 OK in 214ms (Views: 208.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:42:34 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (48.4ms)
+Completed 200 OK in 233ms (Views: 223.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:44:11 -0700
+Processing by StoreController#index as HTML
+  [1m[35mProduct Load (3.3ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (92.9ms)
+Completed 200 OK in 322ms (Views: 300.2ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/line_items?product_id=3" for 127.0.0.1 at 2015-06-02 21:44:14 -0700
+Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"gV3odachjSTzrh228YKrL0V16pMYydqm653G6kFoV3g2Am1IifbRAD2GJkTGwnLnNF9aqobB/j/UKL86SGumpg==", "product_id"=>"3"}
+  [1m[36mCart Load (0.7ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-06-03 04:44:14.712660"], ["updated_at", "2015-06-03 04:44:14.712660"]]
+  [1m[35m (19.9ms)[0m  commit transaction
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["product_id", 3], ["cart_id", 2], ["created_at", "2015-06-03 04:44:14.827797"], ["updated_at", "2015-06-03 04:44:14.827797"]]
+  [1m[35m (8.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/carts/2
+Completed 302 Found in 235ms (ActiveRecord: 39.2ms)
+
+
+Started GET "/carts/2" for 127.0.0.1 at 2015-06-02 21:44:14 -0700
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCart Load (3.0ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mLineItem Load (16.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 2]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered carts/show.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 192ms (Views: 168.7ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/carts" for 127.0.0.1 at 2015-06-02 21:44:34 -0700
+Processing by CartsController#index as HTML
+  [1m[35mCart Load (0.3ms)[0m  SELECT "carts".* FROM "carts"
+  Rendered carts/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 180ms (Views: 174.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-02 21:44:38 -0700
+Processing by StoreController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (55.3ms)
+Completed 200 OK in 234ms (Views: 231.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/line_items?product_id=4" for 127.0.0.1 at 2015-06-02 21:44:42 -0700
+Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"cv9dbtnZs0RMYWfvi/xB+8KXiIkU6U7ouFtP52n/heDFoNhT9w7vYIJJXB28vJgzs704sIrhanGH7jY3YPx0Pg==", "product_id"=>"4"}
+  [1m[35mCart Load (0.4ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (3.3ms)[0m  begin transaction
+  [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["product_id", 4], ["cart_id", 2], ["created_at", "2015-06-03 04:44:42.264342"], ["updated_at", "2015-06-03 04:44:42.264342"]]
+  [1m[35m (12.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/carts/2
+Completed 302 Found in 77ms (ActiveRecord: 21.1ms)
+
+
+Started GET "/carts/2" for 127.0.0.1 at 2015-06-02 21:44:42 -0700
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mLineItem Load (0.6ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 2]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered carts/show.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 203ms (Views: 196.3ms | ActiveRecord: 1.6ms)
