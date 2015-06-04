@@ -17,16 +17,17 @@
 <body class="<%= controller.controller_name %>">
 <!-- START_HIGHLIGHT -->
   <div id="banner">
-    <%= image_tag("http://postfiles11.naver.net/20150518_218/knnk6807_1431956450490ATkKf_JPEG/pic1.jpg?type=w3", size:"260x110") %>
-  
+   <a href="http://localhost:3000"><%= image_tag("http://postfiles11.naver.net/20150518_218/knnk6807_1431956450490ATkKf_JPEG/pic1.jpg?type=w3", align: "middle", size:"260x110") %>
+  </a></div>
+  <div id="banner2">  
     <%= @page_title || "U Drink ME? I Drink U!" %> 
   </div>
 <!-- END_HIGHLIGHT -->  
   <div id="columns">
     <div id="topMenu">
       <ul>
-        <li><a class="menuLInk" href="http://www....">Home</a></li>
-        <li><a class="menuLInk" href="http://www..../product">소주</a></li>
+        <li><a class="menuLInk" href="http://localhost:3000">Home</a></li>
+        <li><a class="menuLInk" href="http://localhost:3000/orders">소주</a></li>
         <li><a class="menuLInk" href="http://www..../product">와인</a></li>
         <li><a class="menuLInk" href="http://www..../product">보드카</a></li>
         <li><a class="menuLInk" href="http://www..../faq">Q&A</a></li>

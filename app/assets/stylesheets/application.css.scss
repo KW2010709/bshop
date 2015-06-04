@@ -16,17 +16,18 @@
 
 
 #banner {
+  img {
+    float: left;
+  }
+}
+#banner2 {
   background: #6495ed;
   font: small-caps 40px/40px "Times New Roman", serif;
   color: white;
   text-align: center;
- 
+  margin-top: 20px; 
   border-bottom: 2px solid;
  }
-  img {
-    float: left;
-  }
-
 
 #notice {
   color: #000 !important;
@@ -46,7 +47,7 @@
     background: white;
   }
   #topMenu {
-    margin-top: 70px;
+    margin-top: 50px;
     text-align: center; 
     background: #6495ed;
   }
