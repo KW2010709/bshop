@@ -1,4 +1,6 @@
 Bshop::Application.routes.draw do
+  get 'welcome/index'
+
   get 'users/signup'
 
   post 'users/signup_complete'
