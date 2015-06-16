@@ -10,7 +10,7 @@ Bshop::Application.routes.draw do
   get 'users/logout_complete'
 
   get 'foods/posts'
-  get "/:category" => 'foods#posts_category'
+  get "f/:category" => 'foods#posts_category'
 
   get "foods/show/:id" => 'foods#show'
 
@@ -25,6 +25,8 @@ Bshop::Application.routes.draw do
   get "foods/delete_complete/:id" => 'foods#delete_complete'
   post "foods/write_comment_complete"
   get "foods/delete_comment_complete/:id" => 'foods#delete_comment_complete'
+  
+  get "products" => 'products#index'
  
   resources :orders
   resources :line_items

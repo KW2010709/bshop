@@ -8,12 +8,12 @@ class FoodsController < ApplicationController
 
   def posts_category
     case params[:category]
-    when "soju"
-      @category = "소주"
-    when "vodka"
-      @category = "보드카"
+    when "hoogi"
+      @category = "후기"
+    when "qna"
+      @category = "Q&A"
     else
-      @category = "와인"
+      @category = "공지사항"
    end
      @posts = Post.where(category: @category)
     
@@ -45,6 +45,10 @@ class FoodsController < ApplicationController
 
   def edit
   @post = Post.find(params[:id])
+    if @post.user_id != session[:user_id]
+      flash[:alert] = "수정 권한이 없습니다."
+      redirect_to :back
+    end
   end
 
   def edit_complete
@@ -62,10 +66,15 @@ class FoodsController < ApplicationController
   end
 
   def delete_complete
-    post = Post.find(params[:id])
-    post.destroy
-    flash[:alert] = "삭제되었습니다."
-    redirect_to "/foods/posts"
+       post = Post.find(params[:id])
+    if post.user_id == session[:user_id]
+      post.destroy
+      flash[:alert] = "삭제되었습니다."
+      redirect_to "/"
+    else
+      flash[:alert] = "삭제 권한이 없습니다."
+      redirect_to :back
+    end
   end
 
   def write_comment_complete
@@ -80,9 +89,14 @@ class FoodsController < ApplicationController
   end
  
   def delete_comment_complete
-    comment = Comment.find(params[:id])
-    comment.destroy
-    flash[:alert] = "댓글이 삭제되었습니다."
-    redirect_to "/foods/show/#{comment.post_id}"
+  comment = Comment.find(params[:id])
+    if comment.user_id == session[:user_id]
+      comment.destroy
+      flash[:alert] = "댓글이 삭제되었습니다."
+      redirect_to "/foods/show/#{comment.post_id}"
+    else
+      flash[:alert] = "해당 댓글의 삭제 권한이 없습니다."
+      redirect_to :back
+    end
   end
 end
