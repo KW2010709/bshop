@@ -32,11 +32,12 @@
       <% if session[:user_id].nil? %>
         <li><a class="menuLInk" href="http://localhost:3000/users/signup">회원가입</a></li>
         <li><a class="menuLInk" href="http://localhost:3000/users/login">로그인</a></li>
+        <li><a class="menuLInk" href="http://localhost:3000/welcome/index">관리자</a></li>
       <% else %>
         <li><a class="menuLInk" href="http://localhost:3000/users/logout_complete">로그아웃</a></li>
-<% end %>
-				<li><a class="menuLInk" href="http://localhost:3000/welcome/index">관리자</a></li>
-  </ul></div> <br>
+    <% end %> 
+
+  </ul></div><br>
    <div id="side">
      <!-- START_HIGHLIGHT -->
        <!-- START:hidden_div -->
