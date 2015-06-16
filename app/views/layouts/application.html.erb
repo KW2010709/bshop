@@ -9,7 +9,7 @@
   ul li{float:left; padding-left: 20px; margin-right:70px}
   ul li a{font-size:21px; text-align: center;  color:white; font-weight:bold; text-decoration:none}
 .menuLink a{color:#fff}</style> <!-- END_HIGHLIGHT -->
-  <!-- <label id="code.slt"/> --><%= stylesheet_link_tag    "application", media: "all",
+  <%= stylesheet_link_tag    "application", media: "all",
     "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -27,11 +27,17 @@
     <div id="topMenu">
       <ul>
         <li><a class="menuLInk" href="http://localhost:3000">Home</a></li>
-        <li><a class="menuLInk" href="http://localhost:3000">SHOP</a></li>
+        <li><a class="menuLInk" href="http://localhost:3000//store/index">SHOP</a></li>
         <li><a class="menuLInk" href="http://localhost:3000">Q&A</a></li>
-        <li><a class="menuLInk" href="http://localhost:3000">알림판</a></li>
-        <li><a class="menuLInk" href="http://localhost:3000">고객센터</a></li></ul>
-    </div> <br>
+        <li><a class="menuLInk" href="http://localhost:3000/foods/posts">구매후기</a></li>
+        <li><a class="menuLInk" href="http://localhost:3000">고객센터</a></li>
+      <% if session[:user_id].nil? %>
+        <li><a class="menuLInk" href="http://localhost:3000/users/signup">회원가입</a></li>
+        <li><a class="menuLInk" href="http://localhost:3000/users/login">로그인</a></li>
+      <% else %>
+        <li><a class="menuLInk" href="http://localhost:3000/users/logout_complete">로그아웃</a></li>
+<% end %>
+  </ul></div> <br>
    <div id="side">
      <!-- START_HIGHLIGHT -->
        <!-- START:hidden_div -->

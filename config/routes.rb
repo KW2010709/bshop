@@ -1,4 +1,31 @@
 Bshop::Application.routes.draw do
+  get 'users/signup'
+
+  post 'users/signup_complete'
+
+  get 'users/login'
+
+  post 'users/login_complete'
+
+  get 'users/logout_complete'
+
+  get 'foods/posts'
+  get "/:category" => 'foods#posts_category'
+
+  get "foods/show/:id" => 'foods#show'
+
+  get 'foods/write'
+
+  post 'foods/write_complete'
+
+  get "foods/edit/:id" => 'foods#edit'
+
+  post 'foods/edit_complete'
+
+  get "foods/delete_complete/:id" => 'foods#delete_complete'
+  post "foods/write_comment_complete"
+  get "foods/delete_comment_complete/:id" => 'foods#delete_comment_complete'
+ 
   resources :orders
   resources :line_items
 
@@ -14,7 +41,7 @@ Bshop::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'store#index', as: 'store'
+   root 'store#index', as: 'store'
   # ...
 
   # Example of regular route:

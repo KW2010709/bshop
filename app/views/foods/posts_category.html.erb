@@ -1,0 +1,16 @@
+<h4><a href="/foods/posts">UDM?IDU! 구매 후기</a> || <a href="/soju">소주</a> | <a href="/vodka">보드카</a> | <a href="/wine">와인</a> || <a href="/foods/write">글쓰기</a> </h4>
+
+
+<div>
+  <h2><%= @category %> 리스트입니다.</h2>
+</div>
+
+<hr>
+
+<% @posts.reverse.each do |post| %>
+<div style="border: 1px solid #ffffff">
+  <h4><a href="/foods/show/<%= post.id %>"><%= post.title %></a></h4>
+  <p style="color: #ff0000"><%= post.category %></p>
+  <p>작성자 아이디</p>
+</div>
+<% end %>

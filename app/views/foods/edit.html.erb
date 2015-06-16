@@ -1,0 +1,15 @@
+<p><%= flash[:alert] %></p>
+<h2>후기 수정하기</h2>
+
+<form action="/foods/edit_complete" method="post">
+   <input type="hidden" name="id" value="<%= @post.id %>">
+  <p style="color: #ff0000">분류:
+  <select name="post_category">
+    <option value="소주">소주</option>
+    <option value="보드카">보드카</option>
+    <option value="와인">와인</option>
+  </select></p>
+  <p>제목: <input type="text" name="post_title" value="<%= @post.title %>"></p>
+  <p>내용: <textarea name="post_content"><%= @post.content %></textarea></p>
+  <input type="submit" value="수정하기">
+</form>
