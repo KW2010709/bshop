@@ -12,7 +12,11 @@ class FoodsController < ApplicationController
       @category = "후기"
     when "qna"
       @category = "Q&A"
+<<<<<<< HEAD
     else
+=======
+    when "notice" 
+>>>>>>> 435287e8d3db3ae8d74ba121aab70fc2a31a267e
       @category = "공지사항"
    end
      @posts = Post.where(category: @category)

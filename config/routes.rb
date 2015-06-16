@@ -10,7 +10,12 @@ Bshop::Application.routes.draw do
   get 'users/logout_complete'
 
   get 'foods/posts'
+<<<<<<< HEAD
   get "f/:category" => 'foods#posts_category'
+=======
+  get "foods/:category" => 'foods#posts_category'
+  get "products" => 'products#index'
+>>>>>>> 435287e8d3db3ae8d74ba121aab70fc2a31a267e
 
   get "foods/show/:id" => 'foods#show'
 
@@ -25,9 +30,15 @@ Bshop::Application.routes.draw do
   get "foods/delete_complete/:id" => 'foods#delete_complete'
   post "foods/write_comment_complete"
   get "foods/delete_comment_complete/:id" => 'foods#delete_comment_complete'
+<<<<<<< HEAD
   
   get "products" => 'products#index'
  
+=======
+
+  get "products" => 'product#index'
+
+>>>>>>> 435287e8d3db3ae8d74ba121aab70fc2a31a267e
   resources :orders
   resources :line_items
 

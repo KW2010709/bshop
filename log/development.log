@@ -13870,6 +13870,7 @@ Processing by FoodsController#show as HTML
 Completed 200 OK in 103ms (Views: 90.1ms | ActiveRecord: 1.2ms)
 
 
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2015-06-16 07:58:53 -0700
   [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by StoreController#index as HTML
@@ -13887,6 +13888,25 @@ Completed 200 OK in 811ms (Views: 682.3ms | ActiveRecord: 25.4ms)
 
 
 Started GET "/images/sf" for 127.0.0.1 at 2015-06-16 07:58:55 -0700
+=======
+Started GET "/" for 127.0.0.1 at 2015-06-16 18:51:40 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (0.4ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-06-17 01:51:40.754644"], ["updated_at", "2015-06-17 01:51:40.754644"]]
+  [1m[36m (24.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mProduct Load (1.8ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (561.8ms)
+  [1m[36mLineItem Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 14]]
+  [1m[35mLineItem Load (0.6ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 14]]
+  Rendered collection (0.1ms)
+  Rendered carts/_cart.html.erb (18.2ms)
+Completed 200 OK in 915ms (Views: 766.3ms | ActiveRecord: 49.5ms)
+
+
+Started GET "/images/sf" for 127.0.0.1 at 2015-06-16 18:51:41 -0700
+>>>>>>> 435287e8d3db3ae8d74ba121aab70fc2a31a267e
 
 ActionController::RoutingError (No route matches [GET] "/images/sf"):
   actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
@@ -13915,6 +13935,7 @@ ActionController::RoutingError (No route matches [GET] "/images/sf"):
   /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.9ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (40.3ms)
@@ -13983,6 +14004,36 @@ Completed 200 OK in 182ms (Views: 165.6ms | ActiveRecord: 6.9ms)
 
 
 Started GET "/images/sf" for 127.0.0.1 at 2015-06-16 08:01:22 -0700
+=======
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (28.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (194.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (111.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (3.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (166.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-16 18:51:44 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (1.0ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (26.0ms)
+  [1m[36mLineItem Exists (3.1ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 14]]
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 14]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (3.8ms)
+Completed 200 OK in 150ms (Views: 127.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/images/sf" for 127.0.0.1 at 2015-06-16 18:51:44 -0700
+>>>>>>> 435287e8d3db3ae8d74ba121aab70fc2a31a267e
 
 ActionController::RoutingError (No route matches [GET] "/images/sf"):
   actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
@@ -14011,6 +14062,7 @@ ActionController::RoutingError (No route matches [GET] "/images/sf"):
   /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.3ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.7ms)
@@ -14076,6 +14128,46 @@ Completed 200 OK in 285ms (Views: 195.6ms | ActiveRecord: 8.0ms)
 
 
 Started GET "/images/sf" for 127.0.0.1 at 2015-06-16 08:11:22 -0700
+=======
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (150.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (11.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (5.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (97.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (192.3ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 18:51:47 -0700
+Processing by FoodsController#posts as HTML
+  [1m[36mCart Load (5.8ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (168.7ms)
+Completed 200 OK in 289ms (Views: 257.1ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2015-06-16 18:51:49 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (4.8ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (27.1ms)
+  [1m[36mLineItem Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 14]]
+  [1m[35mLineItem Load (3.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 14]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (14.2ms)
+Completed 200 OK in 366ms (Views: 345.0ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/images/sf" for 127.0.0.1 at 2015-06-16 18:51:49 -0700
+>>>>>>> 435287e8d3db3ae8d74ba121aab70fc2a31a267e
 
 ActionController::RoutingError (No route matches [GET] "/images/sf"):
   actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
@@ -14104,6 +14196,7 @@ ActionController::RoutingError (No route matches [GET] "/images/sf"):
   /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (16.6ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.8ms)
@@ -14211,6 +14304,46 @@ Completed 200 OK in 292ms (Views: 260.4ms | ActiveRecord: 3.7ms)
 
 
 Started GET "/images/sf" for 127.0.0.1 at 2015-06-16 08:12:37 -0700
+=======
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (166.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (96.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (195.4ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 18:51:51 -0700
+Processing by FoodsController#posts as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 123ms (Views: 110.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2015-06-16 18:51:58 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (2.5ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (30.2ms)
+  [1m[36mLineItem Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 14]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 14]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (3.5ms)
+Completed 200 OK in 143ms (Views: 124.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/images/sf" for 127.0.0.1 at 2015-06-16 18:51:58 -0700
+>>>>>>> 435287e8d3db3ae8d74ba121aab70fc2a31a267e
 
 ActionController::RoutingError (No route matches [GET] "/images/sf"):
   actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
@@ -14239,6 +14372,7 @@ ActionController::RoutingError (No route matches [GET] "/images/sf"):
   /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.3ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (29.5ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
@@ -14267,6 +14401,201 @@ Completed 200 OK in 146ms (Views: 121.7ms | ActiveRecord: 13.2ms)
 
 
 Started GET "/images/sf" for 127.0.0.1 at 2015-06-16 08:13:27 -0700
+=======
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (158.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (5.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (88.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (187.4ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 18:52:00 -0700
+Processing by FoodsController#posts as HTML
+  [1m[36mCart Load (1.0ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 145ms (Views: 125.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/soju" for 127.0.0.1 at 2015-06-16 18:52:03 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"soju"}
+  [1m[36mCart Load (5.5ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "소주"]]
+  Rendered foods/posts_category.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 110ms (Views: 92.9ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/foods/show/1" for 127.0.0.1 at 2015-06-16 18:52:07 -0700
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (4.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (9.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35mComment Load (14.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mUser Load (4.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered foods/show.html.erb within layouts/application (77.5ms)
+Completed 200 OK in 208ms (Views: 153.0ms | ActiveRecord: 32.8ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 18:59:00 -0700
+Processing by FoodsController#posts as HTML
+  [1m[35mCart Load (6.9ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (7.7ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (190.9ms)
+Completed 200 OK in 456ms (Views: 366.4ms | ActiveRecord: 27.1ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 18:59:02 -0700
+Processing by FoodsController#posts as HTML
+  [1m[35mCart Load (2.3ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 206ms (Views: 198.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/hoogi" for 127.0.0.1 at 2015-06-16 18:59:04 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"hoogi"}
+  [1m[35mCart Load (8.4ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "와인"]]
+  Rendered foods/posts_category.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 99ms (Views: 86.8ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 18:59:05 -0700
+Processing by FoodsController#posts as HTML
+  [1m[35mCart Load (5.2ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mUser Load (3.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 108ms (Views: 95.7ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 18:59:06 -0700
+Processing by FoodsController#posts as HTML
+  [1m[35mCart Load (0.4ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 124ms (Views: 105.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/qna" for 127.0.0.1 at 2015-06-16 18:59:07 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"qna"}
+  [1m[35mCart Load (11.8ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPost Load (5.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "와인"]]
+  Rendered foods/posts_category.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 218ms (Views: 192.1ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/wine" for 127.0.0.1 at 2015-06-16 18:59:08 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"wine"}
+  [1m[35mCart Load (0.3ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "와인"]]
+  Rendered foods/posts_category.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 147ms (Views: 142.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/vodka" for 127.0.0.1 at 2015-06-16 18:59:09 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"vodka"}
+  [1m[35mCart Load (1.8ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "보드카"]]
+  Rendered foods/posts_category.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 142ms (Views: 127.9ms | ActiveRecord: 2.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("user_id", "category", "title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["category", "후기"], ["title", "후기0 이름"], ["content", "후기0 글"], ["created_at", "2015-06-17 02:00:14.569687"], ["updated_at", "2015-06-17 02:00:14.569687"]]
+  [1m[35m (6.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("user_id", "category", "title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["user_id", 2], ["category", "후기"], ["title", "후기1 이름"], ["content", "후기1 글"], ["created_at", "2015-06-17 02:00:14.586039"], ["updated_at", "2015-06-17 02:00:14.586039"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("user_id", "category", "title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["category", "Q&A"], ["title", "Q&A0 이름"], ["content", "Q&A0 글"], ["created_at", "2015-06-17 02:00:14.600017"], ["updated_at", "2015-06-17 02:00:14.600017"]]
+  [1m[35m (5.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("user_id", "category", "title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["user_id", 2], ["category", "Q&A"], ["title", "Q&A1 이름"], ["content", "Q&A1 글"], ["created_at", "2015-06-17 02:00:14.609901"], ["updated_at", "2015-06-17 02:00:14.609901"]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("user_id", "category", "title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["category", "공지사항"], ["title", "공지사항0 이름"], ["content", "공지사항0 글"], ["created_at", "2015-06-17 02:00:14.618193"], ["updated_at", "2015-06-17 02:00:14.618193"]]
+  [1m[35m (5.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("user_id", "category", "title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["user_id", 2], ["category", "공지사항"], ["title", "공지사항1 이름"], ["content", "공지사항1 글"], ["created_at", "2015-06-17 02:00:14.628293"], ["updated_at", "2015-06-17 02:00:14.628293"]]
+  [1m[36m (15.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/soju" for 127.0.0.1 at 2015-06-16 19:00:18 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"soju"}
+  [1m[35mCart Load (2.6ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "소주"]]
+  Rendered foods/posts_category.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 134ms (Views: 118.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/vodka" for 127.0.0.1 at 2015-06-16 19:00:19 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"vodka"}
+  [1m[35mCart Load (0.2ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "보드카"]]
+  Rendered foods/posts_category.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 139ms (Views: 134.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/soju" for 127.0.0.1 at 2015-06-16 19:00:20 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"soju"}
+  [1m[35mCart Load (4.9ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "소주"]]
+  Rendered foods/posts_category.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 206ms (Views: 187.3ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/foods/show/1" for 127.0.0.1 at 2015-06-16 19:03:11 -0700
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCart Load (0.5ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ?  [["id", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered foods/show.html.erb within layouts/application (67.5ms)
+Completed 200 OK in 316ms (Views: 163.8ms | ActiveRecord: 23.5ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2015-06-16 19:03:15 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (56.8ms)
+  [1m[36mLineItem Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 14]]
+  [1m[35mLineItem Load (0.7ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 14]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (6.1ms)
+Completed 200 OK in 255ms (Views: 181.4ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/images/sf" for 127.0.0.1 at 2015-06-16 19:03:15 -0700
+>>>>>>> 435287e8d3db3ae8d74ba121aab70fc2a31a267e
 
 ActionController::RoutingError (No route matches [GET] "/images/sf"):
   actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
@@ -14295,15 +14624,24 @@ ActionController::RoutingError (No route matches [GET] "/images/sf"):
   /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (14.3ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.8ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.0ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (155.5ms)
+=======
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (14.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (174.5ms)
+>>>>>>> 435287e8d3db3ae8d74ba121aab70fc2a31a267e
   Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.9ms)
   Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
   Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
   Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+<<<<<<< HEAD
   Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (96.9ms)
   Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
   Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (3.4ms)
@@ -14323,6 +14661,212 @@ Completed 200 OK in 185ms (Views: 159.7ms | ActiveRecord: 12.8ms)
 
 
 Started GET "/images/sf" for 127.0.0.1 at 2015-06-16 08:13:32 -0700
+=======
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (106.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (9.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (195.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-16 19:03:16 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (2.1ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (16.2ms)
+  [1m[36mLineItem Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 14]]
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 14]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (3.9ms)
+Completed 200 OK in 136ms (Views: 119.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/images/sf" for 127.0.0.1 at 2015-06-16 19:03:16 -0700
+>>>>>>> 435287e8d3db3ae8d74ba121aab70fc2a31a267e
+
+ActionController::RoutingError (No route matches [GET] "/images/sf"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+<<<<<<< HEAD
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (18.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (219.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (8.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (108.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (214.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-16 08:13:36 -0700
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 208ms (Views: 205.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/sf" for 127.0.0.1 at 2015-06-16 08:13:36 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/sf"):
+=======
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (260.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (3.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (114.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (3.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (232.3ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 19:03:19 -0700
+Processing by FoodsController#posts as HTML
+  [1m[36mCart Load (0.8ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (7.8ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (4.6ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (22.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (3.7ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (12.9ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (2.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (247.4ms)
+Completed 200 OK in 406ms (Views: 328.4ms | ActiveRecord: 59.0ms)
+
+
+Started GET "/foods/show/7" for 127.0.0.1 at 2015-06-16 19:03:23 -0700
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  Rendered foods/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 125ms (Views: 102.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 19:04:27 -0700
+Processing by FoodsController#posts as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (70.8ms)
+Completed 200 OK in 249ms (Views: 240.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/qna" for 127.0.0.1 at 2015-06-16 19:04:29 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"qna"}
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "Q&A"]]
+  Rendered foods/posts_category.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 139ms (Views: 125.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/notice" for 127.0.0.1 at 2015-06-16 19:04:31 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"notice"}
+  [1m[36mCart Load (10.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "공지사항"]]
+  Rendered foods/posts_category.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 155ms (Views: 141.1ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/hoogi" for 127.0.0.1 at 2015-06-16 19:04:32 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"hoogi"}
+  [1m[36mCart Load (2.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "후기"]]
+  Rendered foods/posts_category.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 120ms (Views: 108.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/notice" for 127.0.0.1 at 2015-06-16 19:04:33 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"notice"}
+  [1m[36mCart Load (0.8ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "공지사항"]]
+  Rendered foods/posts_category.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 122ms (Views: 116.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/foods/show/7" for 127.0.0.1 at 2015-06-16 19:04:34 -0700
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  Rendered foods/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 128ms (Views: 97.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2015-06-16 19:06:35 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (32.6ms)
+  [1m[36mLineItem Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 14]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 14]]
+  Rendered collection (0.1ms)
+  Rendered carts/_cart.html.erb (10.4ms)
+Completed 200 OK in 192ms (Views: 185.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/images/sf" for 127.0.0.1 at 2015-06-16 19:06:35 -0700
 
 ActionController::RoutingError (No route matches [GET] "/images/sf"):
   actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
@@ -14352,28 +14896,351 @@ ActionController::RoutingError (No route matches [GET] "/images/sf"):
 
 
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.3ms)
-  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (18.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.1ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
-  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.6ms)
-  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (219.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (164.7ms)
   Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.9ms)
-  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (8.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
   Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
-  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.1ms)
-  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (108.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (5.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (92.5ms)
   Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
-  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
-  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (214.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (4.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (191.2ms)
 
 
-Started GET "/products" for 127.0.0.1 at 2015-06-16 08:13:36 -0700
-Processing by ProductsController#index as HTML
-  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"
-  Rendered products/index.html.erb within layouts/application (30.4ms)
-Completed 200 OK in 208ms (Views: 205.6ms | ActiveRecord: 0.4ms)
+Started GET "/products/new" for 127.0.0.1 at 2015-06-16 19:06:44 -0700
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (49.1ms)
+  Rendered products/new.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 149ms (Views: 146.6ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/images/sf" for 127.0.0.1 at 2015-06-16 08:13:36 -0700
+Started GET "/products" for 127.0.0.1 at 2015-06-16 19:09:08 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"products"}
+  [1m[36mCart Load (10.3ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (4.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "공지사항"]]
+  Rendered foods/posts_category.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 204ms (Views: 184.8ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 19:09:10 -0700
+Processing by FoodsController#posts as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (4.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (56.6ms)
+Completed 200 OK in 219ms (Views: 208.6ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 19:09:12 -0700
+Processing by FoodsController#posts as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (10.5ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (141.3ms)
+Completed 200 OK in 373ms (Views: 342.9ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/hoogi" for 127.0.0.1 at 2015-06-16 19:09:15 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"hoogi"}
+  [1m[36mCart Load (2.0ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "후기"]]
+  Rendered foods/posts_category.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 115ms (Views: 103.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/qna" for 127.0.0.1 at 2015-06-16 19:09:17 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"qna"}
+  [1m[36mCart Load (2.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (8.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "Q&A"]]
+  Rendered foods/posts_category.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 108ms (Views: 93.5ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/notice" for 127.0.0.1 at 2015-06-16 19:09:19 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"notice"}
+  [1m[36mCart Load (2.8ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "공지사항"]]
+  Rendered foods/posts_category.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 138ms (Views: 127.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 19:09:22 -0700
+Processing by FoodsController#posts as HTML
+  [1m[36mCart Load (3.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (4.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (3.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (74.1ms)
+Completed 200 OK in 165ms (Views: 147.9ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/foods/write" for 127.0.0.1 at 2015-06-16 19:09:23 -0700
+Processing by FoodsController#write as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCart Load (0.2ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered foods/write.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 146ms (Views: 132.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 19:11:32 -0700
+Processing by FoodsController#posts as HTML
+  [1m[36mCart Load (4.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (6.4ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (3.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (139.7ms)
+Completed 200 OK in 405ms (Views: 255.8ms | ActiveRecord: 28.1ms)
+
+
+Started GET "/qna" for 127.0.0.1 at 2015-06-16 19:11:35 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"qna"}
+  [1m[36mCart Load (1.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "Q&A"]]
+  Rendered foods/posts_category.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 141ms (Views: 134.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/foods/show/5" for 127.0.0.1 at 2015-06-16 19:11:36 -0700
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35mComment Load (3.8ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  Rendered foods/show.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 170ms (Views: 134.9ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/foods/write" for 127.0.0.1 at 2015-06-16 19:11:39 -0700
+Processing by FoodsController#write as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCart Load (0.3ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered foods/write.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 147ms (Views: 127.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/foods/write_complete" for 127.0.0.1 at 2015-06-16 19:11:54 -0700
+Processing by FoodsController#write_complete as HTML
+  Parameters: {"post_category"=>"Q&A", "post_title"=>"qna12", "post_content"=>"qna1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCart Load (3.2ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("user_id", "category", "title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["user_id", 1], ["category", "Q&A"], ["title", "qna12"], ["content", "qna1"], ["created_at", "2015-06-17 02:11:54.449745"], ["updated_at", "2015-06-17 02:11:54.449745"]]
+  [1m[36m (21.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/foods/show/8
+Completed 302 Found in 70ms (ActiveRecord: 25.2ms)
+
+
+Started GET "/foods/show/8" for 127.0.0.1 at 2015-06-16 19:11:54 -0700
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mCart Load (0.2ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ?  [["id", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered foods/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 154ms (Views: 138.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 19:12:12 -0700
+Processing by FoodsController#posts as HTML
+  [1m[35mCart Load (0.5ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 8]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (5.8ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mUser Load (14.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (2.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (3.9ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (115.2ms)
+Completed 200 OK in 269ms (Views: 231.5ms | ActiveRecord: 28.5ms)
+
+
+Started GET "/qna" for 127.0.0.1 at 2015-06-16 19:12:14 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"qna"}
+  [1m[35mCart Load (7.6ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPost Load (5.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "Q&A"]]
+  Rendered foods/posts_category.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 152ms (Views: 132.2ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/foods/show/8" for 127.0.0.1 at 2015-06-16 19:12:16 -0700
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mCart Load (0.3ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (9.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ?  [["id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered foods/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 144ms (Views: 109.7ms | ActiveRecord: 10.6ms)
+
+
+Started POST "/foods/write_comment_complete" for 127.0.0.1 at 2015-06-16 19:12:19 -0700
+Processing by FoodsController#write_comment_complete as HTML
+  Parameters: {"post_id"=>"8", "comment_content"=>"1234"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (14.5ms)[0m  [1mINSERT INTO "comments" ("user_id", "post_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["post_id", 8], ["content", "1234"], ["created_at", "2015-06-17 02:12:19.557562"], ["updated_at", "2015-06-17 02:12:19.557562"]]
+  [1m[35m (17.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/foods/show/8
+Completed 302 Found in 90ms (ActiveRecord: 33.2ms)
+
+
+Started GET "/foods/show/8" for 127.0.0.1 at 2015-06-16 19:12:19 -0700
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCart Load (2.8ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (4.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 8]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered foods/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 198ms (Views: 182.8ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 19:12:21 -0700
+Processing by FoodsController#posts as HTML
+  [1m[35mCart Load (4.4ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPost Load (3.9ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 8]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (2.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (101.9ms)
+Completed 200 OK in 205ms (Views: 186.1ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/foods/show/8" for 127.0.0.1 at 2015-06-16 19:12:23 -0700
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mCart Load (0.3ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ?  [["id", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered foods/show.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 269ms (Views: 241.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 19:12:24 -0700
+Processing by FoodsController#posts as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (13.9ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mUser Load (4.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (119.2ms)
+Completed 200 OK in 214ms (Views: 181.0ms | ActiveRecord: 24.2ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2015-06-16 19:12:53 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (44.1ms)
+  [1m[36mLineItem Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 14]]
+  [1m[35mLineItem Load (0.4ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 14]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (5.2ms)
+Completed 200 OK in 246ms (Views: 158.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/images/sf" for 127.0.0.1 at 2015-06-16 19:12:53 -0700
 
 ActionController::RoutingError (No route matches [GET] "/images/sf"):
   actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
@@ -14402,6 +15269,770 @@ ActionController::RoutingError (No route matches [GET] "/images/sf"):
   /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
 
 
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (180.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (70.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (151.6ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-06-16 19:13:03 -0700
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (21.9ms)
+  Rendered products/new.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 180ms (Views: 178.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2015-06-16 19:21:27 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PdswSn/W61eo+2YjvU4eiCHO+/PF7WcUU6RimMvR+WcxJIW0JJRQrHEuzvtQeSDPlm4LYdndAJzVDBxI53M+Lw==", "product"=>{"title"=>"그레이구스 보드카 750ml", "description"=>"\r\n\r\n· 원산지 : 프랑스\r\n· 용량 : 750ml\r\n· 알콜도수 : 40%", "image_url"=>"http://postfiles12.naver.net/20150602_219/knnk6807_1433232232137PDeYc_JPEG/%B1%D7%B7%B9%C0%CC%B1%B8%BD%BA_%BA%B8%B5%E5%C4%AB.jpg?type=w3", "price"=>"59"}, "commit"=>"Create Product"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Exists (0.7ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."title" = '그레이구스 보드카 750ml' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "그레이구스 보드카 750ml"], ["description", "\r\n\r\n· 원산지 : 프랑스\r\n· 용량 : 750ml\r\n· 알콜도수 : 40%"], ["image_url", "http://postfiles12.naver.net/20150602_219/knnk6807_1433232232137PDeYc_JPEG/%B1%D7%B7%B9%C0%CC%B1%B8%BD%BA_%BA%B8%B5%E5%C4%AB.jpg?type=w3"], ["price", 59], ["created_at", "2015-06-17 02:21:28.175376"], ["updated_at", "2015-06-17 02:21:28.175376"]]
+  [1m[35m (5.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 87ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2015-06-16 19:21:28 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (11.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 212ms (Views: 191.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2015-06-16 19:21:32 -0700
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (0.4ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (53.3ms)
+  [1m[35mLineItem Exists (3.7ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 14]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 14]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (6.1ms)
+Completed 200 OK in 240ms (Views: 173.6ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/images/sf" for 127.0.0.1 at 2015-06-16 19:21:33 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/sf"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (69.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (241.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (4.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (103.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (169.5ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-06-16 19:21:50 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (1.6ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 127ms (Views: 115.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2015-06-16 19:21:57 -0700
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (4.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/_form.html.erb (25.4ms)
+  Rendered products/edit.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 141ms (Views: 124.1ms | ActiveRecord: 4.2ms)
+
+
+Started PATCH "/products/1" for 127.0.0.1 at 2015-06-16 19:23:17 -0700
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jV2cxlrLfje0S8CzIp8+EPUHVzriOqiZdYRS/tM3qyeBoik4AYnFzG2eaGvPqABXQqenqP4KzxHzLCwu/5Vsbw==", "product"=>{"title"=>"스미노프 그린애플 700ml", "description"=>"                 \r\n \r\n· 원산지 : 미국\r\n· 용량 : 700ml\r\n· 알콜도수 : 35%", "image_url"=>"http://postfiles13.naver.net/20150518_140/knnk6807_1431956449655D22h5_JPEG/b3.jpg?type=w3", "price"=>"25"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Exists (9.9ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."title" = '스미노프 그린애플 700ml' AND "products"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "products" SET "title" = ?, "description" = ?, "image_url" = ?, "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["title", "스미노프 그린애플 700ml"], ["description", "                 \r\n \r\n· 원산지 : 미국\r\n· 용량 : 700ml\r\n· 알콜도수 : 35%"], ["image_url", "http://postfiles13.naver.net/20150518_140/knnk6807_1431956449655D22h5_JPEG/b3.jpg?type=w3"], ["price", 25], ["updated_at", "2015-06-17 02:23:17.070576"], ["id", 1]]
+  [1m[35m (4.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 90ms (ActiveRecord: 15.7ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-06-16 19:23:17 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 142ms (Views: 139.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2015-06-16 19:23:25 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProduct Load (2.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 3]]
+Completed 404 Not Found in 14ms (ActiveRecord: 2.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=3):
+  app/controllers/products_controller.rb:82:in `set_product'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (21.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (7.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (3.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (79.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (138.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-06-16 19:23:31 -0700
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (17.0ms)
+  Rendered products/new.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 159ms (Views: 156.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2015-06-16 19:25:01 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JEtRZonLErqo6p7rGbP1P4VOixmEZv+Zcfw0tU22PewotOSY0ompQXE/NjP0hMt4Mu57i5hWmBH3VEplYRT6pA==", "product"=>{"title"=>"블루넌 아이스바인 375ml", "description"=>"· 원산지 : 독일\r\n· 용량 : 375ml\r\n· 알콜도수 : 8%", "image_url"=>"http://postfiles10.naver.net/20150602_169/knnk6807_1433232232405hna0W_JPEG/%BA%ED%B7%E7%B3%CD_%BE%C6%C0%CC%BD%BA%B9%D9%C0%CE_%BF%CD%C0%CE.jpg?type=w3", "price"=>"34"}, "commit"=>"Create Product"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Exists (4.5ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."title" = '블루넌 아이스바인 375ml' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "블루넌 아이스바인 375ml"], ["description", "· 원산지 : 독일\r\n· 용량 : 375ml\r\n· 알콜도수 : 8%"], ["image_url", "http://postfiles10.naver.net/20150602_169/knnk6807_1433232232405hna0W_JPEG/%BA%ED%B7%E7%B3%CD_%BE%C6%C0%CC%BD%BA%B9%D9%C0%CE_%BF%CD%C0%CE.jpg?type=w3"], ["price", 34], ["created_at", "2015-06-17 02:25:01.157842"], ["updated_at", "2015-06-17 02:25:01.157842"]]
+  [1m[35m (25.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/products/3
+Completed 302 Found in 79ms (ActiveRecord: 30.5ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2015-06-16 19:25:01 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (3.8ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered products/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 297ms (Views: 281.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-06-16 19:25:05 -0700
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (25.4ms)
+  Rendered products/new.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 145ms (Views: 144.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2015-06-16 19:26:07 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XaoweVnJE2AwjeR0cRYmDzNY02whe/2eHUJGdq6R9dhRVYWHAouom+lYTKycIRhIhPgj/j1Lmhab6jimgjMykA==", "product"=>{"title"=>"비나리 아이스와인 (ICE WINE ) 500ml", "description"=>"· 원산지 : 불가리아\r\n· 용량 : 500ml\r\n· 알콜도수 : 11%", "image_url"=>"http://postfiles11.naver.net/20150602_202/knnk6807_14332322325848Mcl7_JPEG/%BA%F1%B3%AA%B8%AE_%BE%C6%C0%CC%BD%BA%BF%CD%C0%CE.jpg?type=w3", "price"=>"23"}, "commit"=>"Create Product"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mProduct Exists (8.9ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."title" = '비나리 아이스와인 (ICE WINE ) 500ml' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "비나리 아이스와인 (ICE WINE ) 500ml"], ["description", "· 원산지 : 불가리아\r\n· 용량 : 500ml\r\n· 알콜도수 : 11%"], ["image_url", "http://postfiles11.naver.net/20150602_202/knnk6807_14332322325848Mcl7_JPEG/%BA%F1%B3%AA%B8%AE_%BE%C6%C0%CC%BD%BA%BF%CD%C0%CE.jpg?type=w3"], ["price", 23], ["created_at", "2015-06-17 02:26:07.388992"], ["updated_at", "2015-06-17 02:26:07.388992"]]
+  [1m[36m (6.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/4
+Completed 302 Found in 51ms (ActiveRecord: 16.6ms)
+
+
+Started GET "/products/4" for 127.0.0.1 at 2015-06-16 19:26:07 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 92ms (Views: 88.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2015-06-16 19:26:14 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (30.5ms)
+  [1m[36mLineItem Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 14]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 14]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (7.3ms)
+Completed 200 OK in 138ms (Views: 127.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-06-16 19:27:27 -0700
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (21.5ms)
+  Rendered products/new.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 137ms (Views: 128.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2015-06-16 19:28:34 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"khW57O61/bkjiomhD4rKYQBSbPnsAC2FWOJNL2fqgj6e6gwStfdGQvpfIXnivfQmt/Kca/AwSg3eSjP/S0hFdg==", "product"=>{"title"=>"빈야드 (VINYARD) 750ml", "description"=>"                   · 원산지 : 스페인\r\n· 용량 : 750ml\r\n· 알콜도수 : 12%", "image_url"=>"http://postfiles15.naver.net/20150602_286/knnk6807_1433232232790W5LMS_JPEG/%BA%F3%BE%DF%B5%E5_%BF%CD%C0%CE.jpg?type=w3", "price"=>"15"}, "commit"=>"Create Product"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Exists (9.9ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."title" = '빈야드 (VINYARD) 750ml' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "빈야드 (VINYARD) 750ml"], ["description", "                   · 원산지 : 스페인\r\n· 용량 : 750ml\r\n· 알콜도수 : 12%"], ["image_url", "http://postfiles15.naver.net/20150602_286/knnk6807_1433232232790W5LMS_JPEG/%BA%F3%BE%DF%B5%E5_%BF%CD%C0%CE.jpg?type=w3"], ["price", 15], ["created_at", "2015-06-17 02:28:34.706214"], ["updated_at", "2015-06-17 02:28:34.706214"]]
+  [1m[35m (20.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/products/5
+Completed 302 Found in 66ms (ActiveRecord: 31.0ms)
+
+
+Started GET "/products/5" for 127.0.0.1 at 2015-06-16 19:28:34 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (3.6ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered products/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 100ms (Views: 93.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2015-06-16 19:28:37 -0700
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (5.1ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mProduct Load (15.6ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (58.4ms)
+  [1m[35mLineItem Exists (0.3ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 14]]
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 14]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (4.4ms)
+Completed 200 OK in 188ms (Views: 156.6ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-06-16 19:28:54 -0700
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (14.7ms)
+  Rendered products/new.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 189ms (Views: 184.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2015-06-16 19:30:07 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KCdl9nbcoCrsAkvRAMdb3cVvLdXbD4r3bWh7XzImEXIk2NAILZ4b0TXX4wnt8GWacs/dR8c/7X/rwAWPHoTWOg==", "product"=>{"title"=>"샤또믈랭네프 메독 (CHATEAU DU MOULIN NEUF MEDOC) 750ml", "description"=>"　　　　　　· 원산지 : 프랑스\r\n· 용량 : 750ml\r\n· 알콜도수 : 12.5%", "image_url"=>"http://postfiles7.naver.net/20150602_70/knnk6807_1433232232992tmWSL_JPEG/%BB%FE%B6%C7%B9%C9%B7%A9%B3%D7%C7%C1_%BF%CD%C0%CE.jpg?type=w3", "price"=>"27"}, "commit"=>"Create Product"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mProduct Exists (9.0ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE "products"."title" = '샤또믈랭네프 메독 (CHATEAU DU MOULIN NEUF MEDOC) 750ml' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "샤또믈랭네프 메독 (CHATEAU DU MOULIN NEUF MEDOC) 750ml"], ["description", "　　　　　　· 원산지 : 프랑스\r\n· 용량 : 750ml\r\n· 알콜도수 : 12.5%"], ["image_url", "http://postfiles7.naver.net/20150602_70/knnk6807_1433232232992tmWSL_JPEG/%BB%FE%B6%C7%B9%C9%B7%A9%B3%D7%C7%C1_%BF%CD%C0%CE.jpg?type=w3"], ["price", 27], ["created_at", "2015-06-17 02:30:07.084598"], ["updated_at", "2015-06-17 02:30:07.084598"]]
+  [1m[36m (34.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/6
+Completed 302 Found in 87ms (ActiveRecord: 44.1ms)
+
+
+Started GET "/products/6" for 127.0.0.1 at 2015-06-16 19:30:07 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered products/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 101ms (Views: 91.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2015-06-16 19:30:08 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (9.1ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (43.6ms)
+  [1m[36mLineItem Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 14]]
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 14]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (3.5ms)
+Completed 200 OK in 161ms (Views: 141.2ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-16 19:30:44 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"products"}
+  [1m[36mCart Load (6.8ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mPost Load (4.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "공지사항"]]
+  Rendered foods/posts_category.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 151ms (Views: 121.6ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-06-16 19:30:59 -0700
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (21.0ms)
+  Rendered products/new.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 125ms (Views: 123.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-16 19:31:05 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (2.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (62.6ms)
+  [1m[36mLineItem Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 14]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 14]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (3.7ms)
+Completed 200 OK in 182ms (Views: 167.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2015-06-16 19:38:09 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (7.4ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (58.2ms)
+  [1m[36mLineItem Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 14]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 14]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (100.0ms)
+Completed 200 OK in 652ms (Views: 640.4ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/assets/store.self-16d1e9794551b211b5a5c5f2383872833936682ceb43a3b96ce90b3ccfe1519b.css?body=1" for 127.0.0.1 at 2015-06-16 19:38:09 -0700
+
+
+Started GET "/products/5" for 127.0.0.1 at 2015-06-16 19:38:28 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 139ms (Views: 135.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/5/edit" for 127.0.0.1 at 2015-06-16 19:38:30 -0700
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered products/_form.html.erb (45.8ms)
+  Rendered products/edit.html.erb within layouts/application (65.7ms)
+Completed 200 OK in 268ms (Views: 257.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/products/5" for 127.0.0.1 at 2015-06-16 19:38:36 -0700
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j0INs3uNR2gJPhyFtn+BTwyN9H7izXl/r4/doH1QY2eDvbhNIM/8k9DrtF1bSL8Iuy0E7P79HvcpJ6NwUfKkLw==", "product"=>{"title"=>"빈야드 (VINYARD) 750ml", "description"=>"· 원산지 : 스페인\r\n· 용량 : 750ml\r\n· 알콜도수 : 12%", "image_url"=>"http://postfiles15.naver.net/20150602_286/knnk6807_1433232232790W5LMS_JPEG/%BA%F3%BE%DF%B5%E5_%BF%CD%C0%CE.jpg?type=w3", "price"=>"15"}, "commit"=>"Update Product", "id"=>"5"}
+  [1m[36mProduct Load (9.8ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mProduct Exists (6.8ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."title" = '빈야드 (VINYARD) 750ml' AND "products"."id" != 5) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "products" SET "description" = ?, "updated_at" = ? WHERE "products"."id" = ?  [["description", "· 원산지 : 스페인\r\n· 용량 : 750ml\r\n· 알콜도수 : 12%"], ["updated_at", "2015-06-17 02:38:36.555721"], ["id", 5]]
+  [1m[36m (14.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/5
+Completed 302 Found in 89ms (ActiveRecord: 32.0ms)
+
+
+Started GET "/products/5" for 127.0.0.1 at 2015-06-16 19:38:36 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 107ms (Views: 103.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2015-06-16 19:38:38 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (8.7ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (6.1ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (62.3ms)
+  [1m[36mLineItem Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 14]]
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 14]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (3.5ms)
+Completed 200 OK in 217ms (Views: 198.6ms | ActiveRecord: 15.3ms)
+
+
+Started POST "/line_items?product_id=2" for 127.0.0.1 at 2015-06-16 19:38:54 -0700
+Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"kRciMVshOPiMog21WrgMqgyuuPAdRokr4h6aqnfGrsCd6JfPAGODA1V3pW23jzLtuw5IYgF27qNktuR6W2RpiA==", "product_id"=>"2"}
+  [1m[36mCart Load (4.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mLineItem Load (0.4ms)[0m  [1mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."product_id" = ? LIMIT 1[0m  [["cart_id", 14], ["product_id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (6.1ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["product_id", 2], ["cart_id", 14], ["created_at", "2015-06-17 02:38:54.229896"], ["updated_at", "2015-06-17 02:38:54.229896"]]
+  [1m[35m (9.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 103ms (ActiveRecord: 35.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-16 19:38:54 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (16.7ms)
+  [1m[36mLineItem Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 14]]
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 14]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered line_items/_line_item.html.erb (17.5ms)
+  Rendered carts/_cart.html.erb (23.4ms)
+Completed 200 OK in 151ms (Views: 135.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2015-06-16 19:39:37 -0700
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (0.2ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mProduct Load (0.8ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (45.4ms)
+  [1m[35mLineItem Exists (0.2ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 14]]
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 14]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered line_items/_line_item.html.erb (11.1ms)
+  Rendered carts/_cart.html.erb (20.6ms)
+Completed 200 OK in 370ms (Views: 361.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/store.self-e9809787c694dd50d253052a539e7b72b982995ce247109338f52e01c2269c3f.css?body=1" for 127.0.0.1 at 2015-06-16 19:39:37 -0700
+
+
+Started POST "/line_items?product_id=4" for 127.0.0.1 at 2015-06-16 19:39:42 -0700
+Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"L0kH6VOS5s7kFkI+HHmRMgP0v2d0JVh+9pDFeyAlfRUjtrIXCNBdNT3D6ubxTq91tFRP9WgVP/ZwOLurDIe6XQ==", "product_id"=>"4"}
+  [1m[36mCart Load (4.9ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (1.6ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."product_id" = ? LIMIT 1[0m  [["cart_id", 14], ["product_id", 4]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["product_id", 4], ["cart_id", 14], ["created_at", "2015-06-17 02:39:42.933628"], ["updated_at", "2015-06-17 02:39:42.933628"]]
+  [1m[35m (14.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 82ms (ActiveRecord: 23.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-16 19:39:42 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (11.0ms)
+  [1m[36mLineItem Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 14]]
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 14]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered line_items/_line_item.html.erb (14.6ms)
+  Rendered carts/_cart.html.erb (42.9ms)
+Completed 200 OK in 309ms (Views: 300.4ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/line_items?product_id=5" for 127.0.0.1 at 2015-06-16 19:39:45 -0700
+Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"EWFpnLCLP48E1tQqqInvXtNyEn47sCyZJbC8T6B4Hocdntxi68mEdN0DfPJFvtEZZNLi7CeASxGjGMKfjNrZzw==", "product_id"=>"5"}
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (1.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mLineItem Load (0.4ms)[0m  [1mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."product_id" = ? LIMIT 1[0m  [["cart_id", 14], ["product_id", 5]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (2.7ms)[0m  [1mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["product_id", 5], ["cart_id", 14], ["created_at", "2015-06-17 02:39:46.044948"], ["updated_at", "2015-06-17 02:39:46.044948"]]
+  [1m[35m (16.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 72ms (ActiveRecord: 21.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-16 19:39:46 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (3.4ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (13.6ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (70.1ms)
+  [1m[36mLineItem Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 14]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 14]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered line_items/_line_item.html.erb (21.0ms)
+  Rendered carts/_cart.html.erb (39.3ms)
+Completed 200 OK in 358ms (Views: 314.9ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2015-06-16 19:39:48 -0700
+Processing by OrdersController#new as HTML
+  [1m[35mCart Load (0.2ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mLineItem Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 14]]
+  Rendered orders/_form.html.erb (30.4ms)
+  Rendered orders/new.html.erb within layouts/application (40.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 14]]
+  [1m[36mLineItem Load (0.4ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 14]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mProduct Load (3.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered line_items/_line_item.html.erb (14.3ms)
+  Rendered carts/_cart.html.erb (21.2ms)
+Completed 200 OK in 214ms (Views: 155.2ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2015-06-16 19:40:04 -0700
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H+f6UHMv54MnnXoF/5W3PHjNFllL9a6D8knrxfFmAmwTGE+uKG1ceP5I0t0Sool7z23my1fFyQt04ZUV3cTFJA==", "order"=>{"name"=>"nia", "address"=>"nowon", "email"=>"nowon@na.com", "pay_type"=>"Check"}, "commit"=>"Place Order"}
+  [1m[36mCart Load (4.9ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 14]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "orders" ("name", "address", "email", "pay_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "nia"], ["address", "nowon"], ["email", "nowon@na.com"], ["pay_type", "Check"], ["created_at", "2015-06-17 02:40:04.990608"], ["updated_at", "2015-06-17 02:40:04.990608"]]
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "line_items" SET "cart_id" = ?, "order_id" = ?, "updated_at" = ? WHERE "line_items"."id" = ?[0m  [["cart_id", nil], ["order_id", 2], ["updated_at", "2015-06-17 02:40:04.997320"], ["id", 9]]
+  [1m[35mSQL (5.7ms)[0m  UPDATE "line_items" SET "cart_id" = ?, "order_id" = ?, "updated_at" = ? WHERE "line_items"."id" = ?  [["cart_id", nil], ["order_id", 2], ["updated_at", "2015-06-17 02:40:05.015346"], ["id", 10]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "line_items" SET "cart_id" = ?, "order_id" = ?, "updated_at" = ? WHERE "line_items"."id" = ?[0m  [["cart_id", nil], ["order_id", 2], ["updated_at", "2015-06-17 02:40:05.024552"], ["id", 11]]
+  [1m[35m (17.8ms)[0m  commit transaction
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mLineItem Load (6.9ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 14]]
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "carts" WHERE "carts"."id" = ?  [["id", 14]]
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 153ms (ActiveRecord: 44.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-16 19:40:05 -0700
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (0.3ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", nil]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-06-17 02:40:05.129533"], ["updated_at", "2015-06-17 02:40:05.129533"]]
+  [1m[36m (14.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mProduct Load (0.8ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (26.5ms)
+  [1m[36mLineItem Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 15]]
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 15]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (3.5ms)
+Completed 200 OK in 156ms (Views: 124.7ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/orders/" for 127.0.0.1 at 2015-06-16 19:40:43 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"orders"}
+  [1m[36mCart Load (9.0ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "공지사항"]]
+  Rendered foods/posts_category.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 134ms (Views: 121.2ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/orders/" for 127.0.0.1 at 2015-06-16 19:41:58 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"orders"}
+  [1m[36mCart Load (0.8ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" IS NULL
+  Rendered foods/posts_category.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 158ms (Views: 108.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/orders/" for 127.0.0.1 at 2015-06-16 19:42:00 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"orders"}
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" IS NULL
+  Rendered foods/posts_category.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 165ms (Views: 148.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-16 19:42:06 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"products"}
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" IS NULL
+  Rendered foods/posts_category.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 188ms (Views: 175.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-16 19:46:13 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"products"}
+  [1m[36mCart Load (0.5ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" IS NULL
+  Rendered foods/posts_category.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 158ms (Views: 104.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2015-06-16 19:46:17 -0700
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.8ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mProduct Load (2.8ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."title" ASC
+  Rendered store/index.html.erb within layouts/application (94.9ms)
+  [1m[36mLineItem Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 15]]
+  [1m[35mLineItem Load (2.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 15]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (22.1ms)
+Completed 200 OK in 331ms (Views: 270.3ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-16 19:46:22 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"products"}
+  [1m[36mCart Load (10.6ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mPost Load (2.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" IS NULL
+  Rendered foods/posts_category.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 144ms (Views: 121.3ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-16 19:49:57 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"products"}
+  [1m[36mCart Load (0.6ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" IS NULL
+  Rendered foods/posts_category.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 152ms (Views: 100.1ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/product" for 127.0.0.1 at 2015-06-16 19:50:01 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"product"}
+  [1m[36mCart Load (2.0ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" IS NULL
+  Rendered foods/posts_category.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 133ms (Views: 110.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/product" for 127.0.0.1 at 2015-06-16 19:50:03 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"product"}
+  [1m[36mCart Load (7.0ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" IS NULL
+  Rendered foods/posts_category.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 141ms (Views: 127.9ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/prod" for 127.0.0.1 at 2015-06-16 19:50:06 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"prod"}
+  [1m[36mCart Load (8.5ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" IS NULL
+  Rendered foods/posts_category.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 143ms (Views: 126.1ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/products/index" for 127.0.0.1 at 2015-06-16 19:50:59 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 61ms (ActiveRecord: 3.8ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=index):
+  app/controllers/products_controller.rb:82:in `set_product'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (20.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (58.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (4.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (9.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (116.5ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 19:56:10 -0700
+Processing by FoodsController#posts as HTML
+  [1m[35mCart Load (0.5ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 8]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (4.7ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (8.5ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (2.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (2.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (187.1ms)
+Completed 200 OK in 338ms (Views: 262.2ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/hoogi" for 127.0.0.1 at 2015-06-16 19:56:18 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"hoogi"}
+  [1m[35mCart Load (14.7ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "후기"]]
+  Rendered foods/posts_category.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 155ms (Views: 133.7ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/notice" for 127.0.0.1 at 2015-06-16 19:56:20 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"notice"}
+  [1m[35mCart Load (0.3ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "공지사항"]]
+  Rendered foods/posts_category.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 125ms (Views: 108.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/not" for 127.0.0.1 at 2015-06-16 19:56:29 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"not"}
+  [1m[35mCart Load (2.7ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" IS NULL[0m
+  Rendered foods/posts_category.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 158ms (Views: 146.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-16 19:57:42 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"products"}
+  [1m[35mCart Load (0.4ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" IS NULL[0m
+  Rendered foods/posts_category.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 141ms (Views: 93.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/produc" for 127.0.0.1 at 2015-06-16 19:57:48 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"produc"}
+  [1m[35mCart Load (0.3ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" IS NULL[0m
+  Rendered foods/posts_category.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 167ms (Views: 158.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/produc" for 127.0.0.1 at 2015-06-16 19:58:08 -0700
+
+ActionController::RoutingError (No route matches [GET] "/produc"):
+>>>>>>> 435287e8d3db3ae8d74ba121aab70fc2a31a267e
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+<<<<<<< HEAD
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.6ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.1ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.3ms)
@@ -14433,6 +16064,57 @@ Started GET "/images/sf" for 127.0.0.1 at 2015-06-16 08:13:39 -0700
 
 ActionController::RoutingError (No route matches [GET] "/images/sf"):
   actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+=======
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (141.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (7.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (52.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (2.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (105.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-16 19:58:11 -0700
+
+ActionController::RoutingError (uninitialized constant ProductController):
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
   web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
   actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
@@ -14458,6 +16140,102 @@ ActionController::RoutingError (No route matches [GET] "/images/sf"):
   /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
 
 
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (18.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (156.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (65.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (181.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-16 19:58:25 -0700
+Processing by StoreController#index as HTML
+  [1m[35mCart Load (7.4ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."title" ASC[0m
+  Rendered store/index.html.erb within layouts/application (43.2ms)
+  [1m[35mLineItem Exists (0.4ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 15]]
+  [1m[36mLineItem Load (0.5ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 15]]
+  Rendered collection (0.0ms)
+  Rendered carts/_cart.html.erb (6.0ms)
+Completed 200 OK in 232ms (Views: 176.5ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/orders/" for 127.0.0.1 at 2015-06-16 19:58:29 -0700
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.5ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered orders/index.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 137ms (Views: 122.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-16 19:58:36 -0700
+
+ActionController::RoutingError (uninitialized constant ProductController):
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+>>>>>>> 435287e8d3db3ae8d74ba121aab70fc2a31a267e
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+<<<<<<< HEAD
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (18.9ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (19.7ms)
@@ -14615,3 +16393,196 @@ Processing by FoodsController#show as HTML
   [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 8]]
   Rendered foods/show.html.erb within layouts/application (3.2ms)
 Completed 200 OK in 116ms (Views: 103.8ms | ActiveRecord: 1.3ms)
+=======
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (147.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (79.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (4.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (183.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-16 19:59:37 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (116.1ms)
+Completed 200 OK in 247ms (Views: 211.9ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 19:59:42 -0700
+Processing by FoodsController#posts as HTML
+  [1m[35mCart Load (0.4ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mPost Load (2.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 8]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (3.6ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (172.0ms)
+Completed 200 OK in 336ms (Views: 242.6ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/qna" for 127.0.0.1 at 2015-06-16 19:59:45 -0700
+
+ActionController::RoutingError (No route matches [GET] "/qna"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (128.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (52.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (4.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (110.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-06-16 20:00:38 -0700
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.8ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (64.7ms)
+Completed 200 OK in 180ms (Views: 164.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/orders/" for 127.0.0.1 at 2015-06-16 20:00:44 -0700
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (7.8ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 201ms (Views: 170.7ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/foods/" for 127.0.0.1 at 2015-06-16 20:00:51 -0700
+
+ActionController::RoutingError (No route matches [GET] "/foods"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (136.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (13.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (60.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (108.6ms)
+
+
+Started GET "/foods/posts" for 127.0.0.1 at 2015-06-16 20:00:54 -0700
+Processing by FoodsController#posts as HTML
+  [1m[35mCart Load (0.4ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 8]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (6.7ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered foods/posts.html.erb within layouts/application (149.6ms)
+Completed 200 OK in 311ms (Views: 236.4ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/foods/qna" for 127.0.0.1 at 2015-06-16 20:00:56 -0700
+Processing by FoodsController#posts_category as HTML
+  Parameters: {"category"=>"qna"}
+  [1m[35mCart Load (3.9ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "Q&A"]]
+  Rendered foods/posts_category.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 136ms (Views: 125.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/foods/show/8" for 127.0.0.1 at 2015-06-16 20:00:57 -0700
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mCart Load (1.2ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (9.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ?  [["id", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered foods/show.html.erb within layouts/application (77.6ms)
+Completed 200 OK in 199ms (Views: 165.4ms | ActiveRecord: 13.1ms)
+>>>>>>> 435287e8d3db3ae8d74ba121aab70fc2a31a267e
