@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-categories = ["소주","보드카","와인"]
+categories = ["후기","Q&A","공지사항"]
 
 categories.each do |category|
   0.upto(1) do |i|
@@ -13,7 +13,7 @@ categories.each do |category|
     p.user_id = i + 1
     p.category = category
     p.title = "#{category}#{i} 이름"
-    p.content = "#{category}#{i} 후기"
+    p.content = "#{category}#{i} 글"
     p.save
   end
 end

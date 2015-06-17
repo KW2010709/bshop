@@ -34,9 +34,17 @@
       margin-bottom: 2px;
       color: #6495ED;
     }
-
-    p, div.price_line {
+ h4 {
+      font-size: 120%;
+      font-family: sans-serif;
       margin-left: 100px;
+      margin-top: 0;
+      margin-bottom: 2px;
+      color: black;
+    }
+    p, div.price_line {
+      font-size: 120%;
+      margin-left: 250px;
       margin-top: 0.5em; 
       margin-bottom: 0.8em; 
 
